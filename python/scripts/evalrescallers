@@ -1,0 +1,111 @@
+#!/usr/bin/env python3
+
+import evalrescallers
+import argparse
+
+
+parser = argparse.ArgumentParser(
+    prog='evalrescallers',
+    usage='evalrescallers <tasks> <options>',
+    description='script to run evalrescallers helper tasks',
+)
+subparsers = parser.add_subparsers(title='Available tasks', help='', metavar='')
+
+
+#-------------------- setup_pipeline_outdir --------------------------
+subparser_setup_pipeline_outdir = subparsers.add_parser(
+    'setup_pipeline_outdir',
+    help='Sets up pipeline output directory at start of nextflow pipeline',
+    usage='evalrescallers setup_pipeline_outdir <input_data_file.tsv> <output.tsv> <output_dir>',
+)
+
+subparser_setup_pipeline_outdir.add_argument('--no_new_data', action='store_true', help='Use this if continuing previous pipeline, but no new data in data_tsv')
+subparser_setup_pipeline_outdir.add_argument('data_tsv', help='Input data TSV file')
+subparser_setup_pipeline_outdir.add_argument('out_tsv', help='Output jobs TSV file for next stage of nextflow')
+subparser_setup_pipeline_outdir.add_argument('outdir', help='Output directory')
+subparser_setup_pipeline_outdir.set_defaults(func=evalrescallers.tasks.setup_pipeline_outdir.run)
+
+
+#-------------------- run_callers_on_one_sample ----------------------
+subparser_run_callers_on_one_sample = subparsers.add_parser(
+    'run_callers_on_one_sample',
+    help='Runs all callers on one sample',
+    usage='evalrescallers run_callers_on_one_sample <callers_file> <outdir> <reads1> <reads2>',
+)
+
+subparser_run_callers_on_one_sample.add_argument('--testing', action='store_true', help='Saves time by writing fake data instead of running the tools')
+subparser_run_callers_on_one_sample.add_argument('callers_file', help='File with details of callers to be run')
+subparser_run_callers_on_one_sample.add_argument('outdir', help='Output directory')
+subparser_run_callers_on_one_sample.add_argument('reads1', help='Forwards reads file')
+subparser_run_callers_on_one_sample.add_argument('reads2', help='Reverse reads file')
+subparser_run_callers_on_one_sample.set_defaults(func=evalrescallers.tasks.run_callers_on_one_sample.run)
+
+
+#--------------------------- make_summary_json -----------------------
+subparser_make_summary_json = subparsers.add_parser(
+    'make_summary_json',
+    help='Puts all info in each sample summary into one big summary file',
+    usage='evalrescallers make_summary_json [options] <pipeline_dir> <outfile>',
+)
+
+subparser_make_summary_json.add_argument('--threads', type=int, help='Number of JSON files to load at the same time [%(default)s]', default=1, metavar='INT')
+subparser_make_summary_json.add_argument('pipeline_dir', help='Pipeline directory (as made by setup_pipeline_outdir)')
+subparser_make_summary_json.add_argument('outfile', help='Name of output JSON file')
+subparser_make_summary_json.set_defaults(func=evalrescallers.tasks.make_summary_json.run)
+
+
+#----------------------- summary_json_to_stats -----------------------
+subparser_summary_json_to_stats = subparsers.add_parser(
+    'summary_json_to_stats',
+    help='Generates stats from JSON made by make_summary_json',
+    usage='evalrescallers summary_json_to_stats <tb|staph> <in.json> <outprefix>',
+)
+
+subparser_summary_json_to_stats.add_argument('--r_means_susceptible', action='store_true', help='Use this option to count "r" calls as susceptible, instead of default of resistant')
+subparser_summary_json_to_stats.add_argument('species', choices=['tb', 'staph'], help='species (must be tb or staph)')
+subparser_summary_json_to_stats.add_argument('infile', help='Name of input JSON file')
+subparser_summary_json_to_stats.add_argument('outprefix', help='Prefix of output files')
+subparser_summary_json_to_stats.set_defaults(func=evalrescallers.tasks.summary_json_to_stats.run)
+
+
+#-------------------------- download_nejm_reads ----------------------
+subparser_download_nejm_reads = subparsers.add_parser(
+    'download_nejm_reads',
+    help='Downloads NEJM reads from the ENA. Approx 10000 samples so takes some time. Carries on if any downloads fail. Look for files called "fail" in the output directory to check for failures (and see messages to stdout). Can be restarted and will only try to get new samples',
+    usage='evalrescallers download_nejm_reads [options] outdir',
+)
+subparser_download_nejm_reads.add_argument('outdir', help='Name of output directory')
+subparser_download_nejm_reads.add_argument('--threads', type=int, help='Number of simultaneous downloads. Too many and you will get blocked [%(default)s]', default=1)
+subparser_download_nejm_reads.set_defaults(func=evalrescallers.tasks.download_nejm_reads.run)
+
+
+#------------------------ make_res_susc_bar_charts -------------------
+subparser_make_res_susc_bar_charts = subparsers.add_parser(
+    'make_res_susc_bar_charts',
+    help='Makes bar charts of resistant and susceptible samples with counts per tool',
+    usage='evalrescallers make_res_susc_bar_charts <infile> <datasets> <tools> <drugs> <outprefix>',
+)
+subparser_make_res_susc_bar_charts.add_argument('infile', help='Name of input file. Should be accuracy_stats.tsv made by summary_json_to_stats')
+subparser_make_res_susc_bar_charts.add_argument('datasets', help='Comma separated list of datasets (eg mykrobe,10k_validate,10k_test')
+subparser_make_res_susc_bar_charts.add_argument('tools', help='Tools and labels to use in plots (eg Mykrobe,MYK,TB-Profiler,TBF')
+subparser_make_res_susc_bar_charts.add_argument('drugs', help='Drugs and labels to use in plots (eg pyrazinamide,PZA,Ethambutol,EMB')
+subparser_make_res_susc_bar_charts.add_argument('outprefix', help='Prefix of output files')
+subparser_make_res_susc_bar_charts.set_defaults(func=evalrescallers.tasks.make_res_susc_bar_charts.run)
+
+
+#----------------------------- version -------------------------------
+subparser_version = subparsers.add_parser(
+    'version',
+    help='Get version and exit',
+    usage='evalrescallers version',
+    description='Print version and exit',
+)
+subparser_version.set_defaults(func=evalrescallers.tasks.version.run)
+
+args = parser.parse_args()
+
+if hasattr(args, 'func'):
+    args.func(args)
+else:
+    parser.print_help()
+

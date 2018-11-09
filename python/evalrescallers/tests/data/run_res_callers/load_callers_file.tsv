@@ -1,0 +1,6 @@
+Mykrobe	1	dir1	staph	.	spam	.	--opt1 val1
+Mykrobe	1	dir2	tb	walker-2015	foo	.	.
+Mykrobe	0	dir3	tb	panel_name	/path/to/probes	/path/to/var_to_res	--opt2 val2
+TB-Profiler	0	dir4	.	.	.	.	.
+KvarQ	1	dir5	.	.	.	.	.
+MTBseq	1	dir6	.	.	.	.	.

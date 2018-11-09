@@ -1,0 +1,4 @@
+#Pos	Subst	Gene	GeneName	Foo	ResistanceSNP
+7362	Glu21Gln (gag/Cag)	Rv0006	gyrA	foo1	Drug1
+7370	Glu21Gln (gag/Cag)	Rv0006	gyrA	foo2
+7372	Glu21Leu (bar/baz)	Rv0042	-	foo3	Drug2

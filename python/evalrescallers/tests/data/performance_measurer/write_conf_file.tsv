@@ -1,0 +1,16 @@
+Dataset	Tool	Drug	Call	Conf	Ref_depth	Alt_depth	Expected_depth
+10k	tool1	drug1	FN	4	0	5	50
+10k	tool1	drug1	FP	8	0	4	50
+10k	tool1	drug1	TN	1	0	1	50
+10k	tool1	drug1	TN	50	0	60	50
+10k	tool1	drug1	TP	11	1	5	50
+10k	tool2	drug2	FP	50	10	1000	500
+mykrobe	tool1	drug1	FN	6	2	3	50
+mykrobe	tool1	drug1	FP	1	0	1	50
+mykrobe	tool1	drug1	FP	3	1	3	50
+mykrobe	tool1	drug1	FP	4	1	2	50
+mykrobe	tool1	drug1	TN	100	1	50	50
+mykrobe	tool1	drug1	TN	101	2	55	50
+mykrobe	tool1	drug1	TP	42	0	10	50
+mykrobe	tool1	drug1	TP	43	1	12	50
+mykrobe	tool2	drug1	TP	44	1	20	50

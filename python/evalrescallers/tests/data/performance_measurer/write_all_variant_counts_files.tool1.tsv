@@ -1,0 +1,10 @@
+Dataset	Drug	PPV	TP	FP	Variant
+10k	drug2	0.0	0	1	var4
+10k	drug3	100.0	1	0	var6
+all	drug1	100.0	1	0	var1
+all	drug1	100.0	1	0	var2
+all	drug2	50.0	1	1	var4
+all	drug3	100.0	1	0	var6
+mykrobe	drug1	100.0	1	0	var1
+mykrobe	drug1	100.0	1	0	var2
+mykrobe	drug2	50.0	1	1	var4

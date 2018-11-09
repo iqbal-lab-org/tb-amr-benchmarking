@@ -1,0 +1,29 @@
+{
+    "Tool1": {
+        "Success": true,
+        "resistance_calls": {
+            "Drug1": [
+                [
+                    "R",
+                    "gene1",
+                    "A42B",
+                    42
+                ]
+            ],
+            "Drug2": [
+                [
+                    "R",
+                    "gene2",
+                    "C43D",
+                    null
+                ]
+            ]
+        },
+        "time_and_memory": {
+            "ram": 100.0,
+            "system_time": 0.33,
+            "user_time": 1116.56,
+            "wall_clock_time": 1318.59
+        }
+    }
+}

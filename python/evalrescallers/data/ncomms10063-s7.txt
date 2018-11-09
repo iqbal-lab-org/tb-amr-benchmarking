@@ -1,0 +1,340 @@
+"Supplementary Data 6. R - Resistance, S - Susceptible"													
+sample_set	comid	sra_accessions	species	Rifampicin	Isoniazid	Ethambutol	Kanamycin	Capreomycin	Amikacin	Streptomycin	Ciprofloxacin	Moxifloxacin	Amoxicillin
+MTBC_A1	C00000575	ERR025839	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00000581	ERR025846	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00003749	ERR038257	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00003757	ERR038265	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00003758	ERR038266	tuberculosis	S	S	S	 	 	S	S	S	 	 
+MTBC_A1	C00003763	ERR038271	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00003766	ERR038274	tuberculosis	S	S	S	 	 	 	S	 	 	 
+MTBC_A1	C00003767	ERR038275	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00003772	ERR038280	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00003780	ERR038288	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00003781	SRR2100067	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00003784	ERR038292	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00003786	ERR038294	tuberculosis	S	S	S	 	S	S	S	 	S	R
+MTBC_A1	C00003798	ERR039328	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00003817	ERR040086	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00003819	ERR040088	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00003823	SRR2100068	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00003824	ERR040093	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00003839	ERR040108	tuberculosis	S	S	S	 	 	 	S	 	 	 
+MTBC_A1	C00005264	ERR046729	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005266	SRR2100069	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005282	ERR046747	bovis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005283	ERR046748	bovis	S	S	S	 	 	 	S	 	 	 
+MTBC_A1	C00005284	ERR046749	bovis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005285	SRR2100072	bovis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005290	ERR046755	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005291	ERR046756	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005295	ERR046760	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005301	ERR046766	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005309	SRR2100074	bovis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005318	ERR046783	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005320	ERR046785	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005338	SRR2100077	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005354	ERR046819	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005356	ERR046821	tuberculosis	R	R	S	 	 	S	R	B	 	 
+MTBC_A1	C00005358	ERR046823	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005360	ERR046825	tuberculosis	R	S	S	 	S	S	S	S	 	 
+MTBC_A1	C00005361	SRR2100088	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005366	ERR046831	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005369	ERR046834	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00005375	ERR046840	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005377	ERR046842	tuberculosis	S	S	S	 	 	 	 	S	 	 
+MTBC_A1	C00005379	ERR046844	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005381	ERR046846	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005385	ERR046850	tuberculosis	S	S	S	 	 	 	S	 	 	 
+MTBC_A1	C00005387	ERR046852	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005389	ERR046854	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005397	ERR046862	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005406	ERR046871	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005408	ERR046873	tuberculosis	S	S	S	 	 	 	S	 	 	 
+MTBC_A1	C00005413	ERR046878	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005417	ERR046882	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005422	ERR046887	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005425	ERR046890	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005438	ERR046903	tuberculosis	R	R	R	 	S	S	 	R	 	 
+MTBC_A1	C00005442	ERR046907	tuberculosis	S	S	S	 	 	 	S	 	 	 
+MTBC_A1	C00005448	ERR046913	tuberculosis	S	S	R	 	 	 	 	R	 	 
+MTBC_A1	C00005449	ERR046914	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005456	ERR046921	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005457	ERR046922	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005462	SRR2100104	tuberculosis	S	S	S							
+MTBC_A1	C00005467	ERR046932	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005468	ERR046933	africanum	 	R	 	 	 	 	 	 	 	 
+MTBC_A1	C00005473	ERR046938	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005477	ERR046942	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005483	ERR046948	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005487	ERR046952	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005488	ERR046953	tuberculosis	S	S	S	 	 	 	 	S	 	 
+MTBC_A1	C00005489	ERR046954	bovis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005494	ERR046959	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005496	ERR046961	bovis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005499	ERR046964	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005502	ERR046967	tuberculosis	S	S	S	 	 	 	 	S	 	 
+MTBC_A1	C00005511	SRR2100096	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005518	ERR046983	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005520	SRR2100101	tuberculosis	R	R	S	 	 	 	S	S	 	 
+MTBC_A1	C00005524	ERR046989	bovis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005526	ERR046991	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005538	ERR047003	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00005544	ERR047009	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00007277	ERR072029	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00007280	ERR072032	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00007287	ERR072039	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00007290	ERR072042	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00007294	ERR072046	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00007295	ERR072047	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00007296	ERR072048	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00007306	SRR2100112	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00007309	SRR2100115	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00007321	SRR2100124	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00007326	SRR2100128	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00007334	SRR2100134	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008682	SRR2100157	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00008683	SRR2100158	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00008687	SRR2100160	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008689	SRR2100162	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008690	SRR2100163	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008692	SRR2100165	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008696	SRR2100168	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00008699	SRR2100169	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008700	SRR2100170	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008703	SRR2100173	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008711	SRR2100180	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008714	SRR2100183	africanum	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008733	SRR2100198	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00008736	SRR2100201	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008737	SRR2100202	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008739	SRR2100204	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008741	SRR2100205	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008746	SRR2100210	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008750	SRR2467268	tuberculosis		R	S					S		
+MTBC_A1	C00008753	SRR2100216	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00008754	SRR2100217	tuberculosis	R	R	S	S	S	S	S	S	S	S
+MTBC_A1	C00008759	SRR2100222	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008760	SRR2100223	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008769	SRR2100229	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00008774	SRR2100234	tuberculosis	R	R	R	 	 	 	 	S	 	 
+MTBC_A1	C00008787	SRR2100246	tuberculosis	R	R	S	S	S	S	S	S	S	S
+MTBC_A1	C00008789	SRR2100248	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00008791	SRR2100250	tuberculosis	R	R	S	R	R	R	R	 	R	R
+MTBC_A1	C00008804	SRR2100260	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00008808	SRR2100264	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008813	SRR2100269	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008826	SRR2100281	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008827	SRR2100282	tuberculosis	R	R	S	S	S	S	 	S	S	S
+MTBC_A1	C00008832	SRR2100287	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008833	SRR2100288	tuberculosis	S	R	S	S	S	S	S	S	S	S
+MTBC_A1	C00008834	SRR2100289	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00008836	SRR2100291	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008840	SRR2100295	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00008849	SRR2100304	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008852	SRR2100307	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008853	SRR2100308	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008854	SRR2100309	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008860	SRR2100314	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008861	SRR2100315	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008862	SRR2100316	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008873	SRR2100327	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008875	SRR2100329	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008876	SRR2100330	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008887	SRR2100340	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00008896	SRR2100349	tuberculosis	R	R	S	S	S	S	S	S	S	S
+MTBC_A1	C00008899	SRR2100352	tuberculosis	R	R	R	S	S	S	R	S	S	S
+MTBC_A1	C00008903	SRR2100356	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008904	SRR2100357	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008905	SRR2100358	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008907	SRR2100360	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008910	SRR2100362	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008920	SRR2100371	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008922	SRR2100373	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008924	SRR2100375	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008927	SRR2100378	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008929	SRR2100380	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00008932	SRR2100383	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00008934	SRR2100385	tuberculosis	R	R	R	S	S	S	 	S	S	S
+MTBC_A1	C00009070	SRR2100391	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00009088	SRR2100270	tuberculosis	S	R	S					S		
+MTBC_A1	C00009113	SRR2467270	tuberculosis	S	R	S					S		
+MTBC_A1	C00012868	SRR2100467	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012873	SRR2100472	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012875	SRR2100474	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012882	SRR2100480	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012897	SRR2100494	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012899	SRR2100495	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012901	SRR2100497	tuberculosis	 	 	 	 	 	 	 	 	 	 
+MTBC_A1	C00012905	SRR2467271	tuberculosis	S	R				S	S	S		
+MTBC_A1	C00012907	SRR2100502	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012909	SRR2100504	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012913	SRR2100507	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012921	SRR2100514	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012924	SRR2100517	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012930	SRR2100522	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012942	SRR2100533	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012945	SRR2100536	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012947	SRR2100538	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012948	SRR2100539	africanum	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012957	SRR2100548	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012958	SRR2100549	tuberculosis	 	 	 	 	 	 	 	 	 	 
+MTBC_A1	C00012959	SRR2100550	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012963	SRR2100554	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012972	SRR2100563	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012977	SRR2100567	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012988	SRR2100576	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00012989	SRR2100577	africanum	S	S	S	 	 	 	 	S	 	 
+MTBC_A1	C00013010	SRR2100598	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013011	SRR2100599	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013018	SRR2100606	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013019	SRR2100607	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013020	SRR2100608	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013023	SRR2100611	tuberculosis	S	S	S	 	 	 	 	S	 	 
+MTBC_A1	C00013026	SRR2100614	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013029	SRR2100617	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013031	SRR2100619	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013038	SRR2100626	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013039	SRR2100627	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013048	SRR2100635	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013065	SRR2100651	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013074	SRR2100659	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013080	SRR2100664	tuberculosis	S	S	S	 	 	 	 	S	 	 
+MTBC_A1	C00013081	SRR2100665	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013091	SRR2100674	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013094	SRR2100677	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013096	SRR2100679	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013097	SRR2100680	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013098	SRR2100681	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013101	SRR2100684	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013102	SRR2100685	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013111	SRR2100694	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013114	SRR2100697	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013118	SRR2100701	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013119	SRR2100702	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013121	SRR2100704	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013131	SRR2100713	africanum	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013133	SRR2100715	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013135	SRR2100717	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013145	SRR2100727	tuberculosis	S	S	S	 	 	 	 	S	 	 
+MTBC_A1	C00013146	SRR2100728	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00013152	SRR2100734	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014539	SRR2100740	tuberculosis	R	R	R	S	S	S	R	B	R	R
+MTBC_A1	C00014550	SRR2100751	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014559	SRR2100759	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014562	SRR2100761	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014565	SRR2100764	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014571	SRR2100769	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014573	SRR2100771	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014577	SRR2100773	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014578	SRR1524019	tuberculosis	S	S	S							
+MTBC_A1	C00014581	SRR2100775	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014588	SRR2100782	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014601	SRR2100793	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014602	SRR2100794	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014607	SRR2100799	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014615	SRR2100906	tuberculosis	S	S	S							
+MTBC_A1	C00014623	SRR2100813	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014624	SRR2100814	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014631	SRR2100819	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014739	SRR2100830	tuberculosis	R	R	R	R	S	S	R	S	R	R
+MTBC_A1	C00014740	SRR2100831	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00014749	SRR2100838	tuberculosis	R	R	S	S	S	S	 	S	S	S
+MTBC_A1	C00014759	SRR2100844	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014762	SRR2100846	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00014763	SRR2100847	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014779	SRR2100862	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014785	SRR2100867	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014786	SRR2100868	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00014788	SRR2100870	tuberculosis	R	R	R	 	 	 	 	 	 	 
+MTBC_A1	C00014791	SRR2100872	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00014794	SRR2100875	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00014798	SRR2100879	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00014800	SRR2100881	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00014805	SRR2100886	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00014808	SRR2100889	tuberculosis	R	R	R	R	R	R	 	S	S	S
+MTBC_A1	C00014811	SRR2100892	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00014813	SRR2100893	tuberculosis	S	S	S	S	 	S	 	R	R	R
+MTBC_A1	C00014819	SRR2100897	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00014821	SRR2100899	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014845	SRR2100910	tuberculosis	S	B	S	 	 	 	 	S	 	 
+MTBC_A1	C00014850	SRR2100915	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00014861	SRR2100926	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014863	SRR2100928	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014868	SRR2100933	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014870	SRR2100935	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014872	SRR2100937	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014876	SRR2100941	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014877	SRR2100942	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014879	SRR2100943	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014880	SRR2100944	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014888	SRR2100947	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014889	SRR2100948	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014891	SRR2100950	tuberculosis	R	R	R	S	S	S	 	S	S	S
+MTBC_A1	C00014908	SRR2100963	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014918	SRR2100967	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014924	SRR2100973	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014936	SRR2100985	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014938	SRR2100987	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014939	SRR2100988	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014943	SRR2100992	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014946	SRR2100995	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014951	SRR2101000	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014954	SRR2101002	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014960	SRR2101008	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014970	SRR2101018	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014973	SRR2101020	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00014993	SRR2101035	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00015000	SRR2101038	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00015007	SRR2101043	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00015014	SRR2101050	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00015022	SRR2101056	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00015027	SRR2101061	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00015221	SRR2101062	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016850	SRR2101089	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016851	SRR2101090	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016853	SRR2101092	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016860	SRR2101099	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016863	SRR2101102	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016874	SRR2101113	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016881	SRR2101120	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016884	SRR2101123	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016887	SRR2101126	tuberculosis	S	S	S	 	 	 	 	S	 	 
+MTBC_A1	C00016892	SRR2101131	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016897	SRR2101136	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016898	SRR2101137	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016899	SRR2101138	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016901	SRR2101140	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016903	SRR2101142	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016907	SRR2101146	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016912	SRR2101151	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016916	SRR2101155	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016917	SRR2101156	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016919	SRR2101158	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016922	SRR2101161	africanum	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016924	SRR2101163	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016930	SRR2101169	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016934	SRR2101173	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00016943	SRR2101182	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00017919	SRR2101186	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00017922	SRR2101188	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00017923	SRR2101189	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00017926	SRR2101192	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00017937	SRR2101203	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00017949	SRR2101215	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00017954	SRR2101220	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00017956	SRR2101222	africanum	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00017969	SRR2101235	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00017973	SRR2101238	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00017975	SRR2101240	tuberculosis	S	R	S	 	 	 	 	S	 	 
+MTBC_A1	C00017976	SRR2101241	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00017977	SRR2101242	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00017987	SRR2101252	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00017988	SRR2101253	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00017989	SRR2101254	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00017991	SRR2101256	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00017992	SRR2101257	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00017999	SRR2101264	africanum	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00018000	SRR2101265	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00018001	SRR2101266	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00018005	SRR2101270	tuberculosis	S	S	S	 	 	 	 	 	 	 
+MTBC_A1	C00018006	SRR2101271	tuberculosis	S	S	S	 	 	 	 	 	 	 

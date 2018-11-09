@@ -1,0 +1,5 @@
+"Supplementary Dataset 3. R - Resistance, S - Susceptible"																	
+sample_set	comid	sra_accessions	species	Sequence Type (ST)	Clonal Complex (CC)	Gentamicin	Penicillin	Trimethoprim	Erythromycin	Methicillin	Ciprofloxacin	Rifampicin	Tetracycline	Mupirocin	FusidicAcid	Clindamycin	Vancomycin
+St_B1	C00001075	ERR410034	aureus	15	cc15	S	R	S	S	S	S	S	S	S	S		S
+St_B1	C00001076	ERR410035	aureus	1094	cc1094	S	S	S	R	S	S	S	S	S	S		S
+St_B1	C00001077	ERR410036	aureus	97	cc97	S	S	S	S	S	S	S	S	S	S		S

@@ -1,0 +1,32 @@
+{
+    "Drug1": [
+        [
+            "R",
+            "gene2",
+            "X42Y",
+            null
+        ],
+        [
+            "R",
+            "gyrA",
+            "Glu21Gln",
+            null
+        ]
+    ],
+    "Drug2": [
+        [
+            "R",
+            "Rv0042",
+            "Glu21Leu",
+            null
+        ]
+    ],
+    "Drug4": [
+        [
+            "R",
+            "gene3",
+            "A4242B",
+            null
+        ]
+    ]
+}

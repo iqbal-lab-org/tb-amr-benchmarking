@@ -1,0 +1,6 @@
+Dataset	Drug	PPV	TP	FP	Variant
+10k_test	Ethambutol	0.0	0	1	gene2.A1B
+10k_test	Isoniazid	0.0	0	1	gene1.A43B;gene1.X42Y
+all	Ethambutol	0.0	0	2	gene2.A1B
+all	Isoniazid	0.0	0	1	gene1.A43B;gene1.X42Y
+mykrobe	Ethambutol	0.0	0	2	gene2.A1B

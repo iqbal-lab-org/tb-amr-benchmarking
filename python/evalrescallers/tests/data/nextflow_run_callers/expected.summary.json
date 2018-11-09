@@ -1,0 +1,62 @@
+{
+    "KvarQ": {
+        "Success": true,
+        "resistance_calls": {
+            "Ethambutol": [
+                [
+                    "R",
+                    "embB",
+                    "M306I",
+                    null
+                ]
+            ]
+        },
+        "time_and_memory": {
+            "ram": 2136.0,
+            "system_time": 0.0,
+            "user_time": 0.0,
+            "wall_clock_time": 1.0
+        }
+    },
+    "Mykrobe.tb.Fail": {
+        "Success": false
+    },
+    "Mykrobe.tb.walker-2015": {
+        "Success": true,
+        "resistance_calls": {
+            "Ethambutol": [
+                [
+                    "r",
+                    "embB",
+                    "M306J",
+                    42
+                ]
+            ]
+        },
+        "time_and_memory": {
+            "ram": 2136.0,
+            "system_time": 0.0,
+            "user_time": 0.0,
+            "wall_clock_time": 1.02
+        }
+    },
+    "TB-Profiler": {
+        "Success": true,
+        "resistance_calls": {
+            "Ethambutol": [
+                [
+                    "R",
+                    "embB",
+                    "M306K",
+                    null
+                ]
+            ]
+        },
+        "time_and_memory": {
+            "ram": 2052.0,
+            "system_time": 0.0,
+            "user_time": 0.0,
+            "wall_clock_time": 1.0
+        }
+    }
+}

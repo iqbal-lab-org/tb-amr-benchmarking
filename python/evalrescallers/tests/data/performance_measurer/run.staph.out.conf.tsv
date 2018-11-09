@@ -1,0 +1,4 @@
+Dataset	Tool	Drug	Call	Conf	Ref_depth	Alt_depth	Expected_depth
+mykrobe	tool1	Erythromycin	FP	43	1	11	12
+mykrobe	tool1	Erythromycin	TP	44	2	50	12
+mykrobe	tool1	Penicillin	TP	42	0	10	12

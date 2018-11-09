@@ -1,0 +1,13 @@
+Dataset	Tool	Drug	TP	FN	TN	FP	FAIL_R	FAIL_S
+set1	tool2	Drug1	70	25	100	15	0	5
+set1	tool1	Drug1	90	10	100	20	0	0
+set1	tool3	Drug1	80	0	100	0	0	5
+set1	tool4	Drug1	0	40	0	60	0	60
+set1	tool5	Drug1	10	30	20	40	0	60
+set1	tool1	Drug2	70	0	70	0	0	0
+set1	tool2	Drug2	0	70	0	70	0	0
+set1	tool3	Drug2	0	0	0	0	0	70
+set1	tool4	Drug2	20	20	10	30	0	30
+set2	tool1	Drug1	50	50	50	50	0	0
+set2	tool2	Drug1	50	50	50	50	0	0
+set2	tool3	Drug1	50	50	50	50	0	0

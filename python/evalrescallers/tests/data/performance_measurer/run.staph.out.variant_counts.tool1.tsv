@@ -1,0 +1,3 @@
+Dataset	Drug	PPV	TP	FP	Variant
+mykrobe	Erythromycin	50.0	1	1	gene2.var2
+mykrobe	Penicillin	100.0	1	0	gene1.var1

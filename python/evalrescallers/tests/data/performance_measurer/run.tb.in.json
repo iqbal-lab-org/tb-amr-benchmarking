@@ -1,0 +1,36 @@
+{
+    "ERR2514755": {
+        "tool1": {
+            "Success": true,
+            "resistance_calls": {
+                "Isoniazid": [["R", "gene1", "X42Y", {"conf": 42, "ref_depth": 0, "alt_depth": 9, "expected_depth": 11}], ["R", "gene1", "A43B", {"conf": 40, "ref_depth": 2, "alt_depth": 10, "expected_depth": 11}]],
+                "Rifampicin": [["S", null, null, null]],
+                "Ethambutol": [["R", "gene2", "A1B", {"conf": 43, "ref_depth": 1, "alt_depth": 10, "expected_depth": 11}]]
+            }
+        },
+        "tool2": {
+            "Success": false,
+            "resistance_calls": {}
+        }
+    },
+    "ERR025839": {
+        "tool1": {
+            "Success": true,
+            "resistance_calls": {
+                "Isoniazid": [["S", null, null, null]],
+                "Rifampicin": [["S", null, null, null]],
+                "Ethambutol": [["R", "gene2", "A1B", {"conf": 50, "ref_depth": 1, "alt_depth": 101, "expected_depth": 100}]],
+                "Kanamycin": [["S", null, null, null]]
+            }
+        },
+        "tool2": {
+            "Success": true,
+            "resistance_calls": {
+                "Isoniazid": [["S", null, null, null]],
+                "Rifampicin": [["S", null, null, null]],
+                "Ethambutol": [["S", null, null, null]],
+                "Kanamycin": [["R", "gene3", "D10E", {"conf": 70, "ref_depth": 2, "alt_depth": 77, "expected_depth": 50}], ["R", "gene3", "I100J", {"conf": 71, "ref_depth": 3, "alt_depth": 99, "expected_depth": 50}]]
+            }
+        }
+    }
+}

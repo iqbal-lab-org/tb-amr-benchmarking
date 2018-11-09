@@ -1,0 +1,4 @@
+Dataset	Drug	Tool	TP	TN	FP	FN	FAIL_R	FAIL_S	UNK	Sensitivity	Sensitivity_conf_low	Sensitivity_conf_high	Specificity	Specificity_conf_low	Specificity_conf_high	PPV	PPV_conf_low	PPV_conf_high	NPV	NPV_conf_low	NPV_conf_high	FNR	FNR_conf_low	FNR_conf_high	FPR	FPR_conf_low	FPR_conf_high
+10k	drug3	tool1	3	1	3	1	0	0	1	75.0	0.3	0.95	25.0	0.05	0.7	50.0	0.19	0.81	50.0	0.09	0.91	25.0	0.05	0.7	75.0	0.3	0.95
+mykrobe	drug1	tool1	9	10	1	2	1	0	1	81.82	0.52	0.95	90.91	0.62	0.98	90.0	0.6	0.98	83.33	0.55	0.95	18.18	0.05	0.48	9.09	0.02	0.38
+mykrobe	drug2	tool2	10	3	0	0	1	0	0	100.0	0.72	1.0	100.0	0.44	1.0	100.0	0.72	1.0	100.0	0.44	1.0	0.0	0.0	0.28	0.0	0.0	0.56

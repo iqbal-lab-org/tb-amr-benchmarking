@@ -1,0 +1,6 @@
+{"samples_per_dir": 42,
+  "samples": {
+    "sample1": {"name": "sample1", "reads": ["file1.1", "file1.2"], "number": 0, "dir": "0/0"},
+    "sample2": {"name": "sample2", "reads": ["file2.1", "file2.2"], "number": 1, "dir": "0/1"}
+  }
+}

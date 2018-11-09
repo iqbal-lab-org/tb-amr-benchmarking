@@ -1,0 +1,61 @@
+{
+    "ERR410034": {
+        "tool1": {
+            "Success": true,
+            "resistance_calls": {
+                "Gentamicin": [["S", null, null, null]],
+                "Penicillin": [["R", "gene1", "var1", {"conf": 42, "ref_depth": 0, "alt_depth": 10, "expected_depth": 12}]],
+                "Trimethoprim": [["S", null, null, null]],
+                "Erythromycin": [["R", "gene2", "var2", {"conf": 43, "ref_depth": 1, "alt_depth": 11, "expected_depth": 12}]],
+                "Methicillin": [["S", null, null, null]],
+                "Ciprofloxacin": [["S", null, null, null]],
+                "Rifampicin": [["S", null, null, null]],
+                "Tetracycline": [["S", null, null, null]],
+                "Mupirocin": [["S", null, null, null]],
+                "FusidicAcid": [["S", null, null, null]],
+                "Clindamycin": [["S", null, null, null]],
+                "Vancomycin": [["S", null, null, null]]
+            }
+        },
+        "tool2": {
+            "Success": false,
+            "resistance_calls": {}
+        }
+    },
+    "ERR410035": {
+        "tool1": {
+            "Success": true,
+            "resistance_calls": {
+                "Gentamicin": [["S", null, null, null]],
+                "Penicillin": [["S", null, null, null]],
+                "Trimethoprim": [["S", null, null, null]],
+                "Erythromycin": [["R", "gene2", "var2", {"conf": 44, "ref_depth": 2, "alt_depth": 50, "expected_depth": 12}]],
+                "Methicillin": [["S", null, null, null]],
+                "Ciprofloxacin": [["S", null, null, null]],
+                "Rifampicin": [["S", null, null, null]],
+                "Tetracycline": [["S", null, null, null]],
+                "Mupirocin": [["S", null, null, null]],
+                "FusidicAcid": [["S", null, null, null]],
+                "Clindamycin": [["S", null, null, null]],
+                "Vancomycin": [["S", null, null, null]]
+            }
+        },
+        "tool2": {
+            "Success": true,
+            "resistance_calls": {
+                "Gentamicin": [["S", null, null, null]],
+                "Penicillin": [["S", null, null, null]],
+                "Trimethoprim": [["S", null, null, null]],
+                "Erythromycin": [["R", "gene2", "var2", {}]],
+                "Methicillin": [["S", null, null, null]],
+                "Ciprofloxacin": [["S", null, null, null]],
+                "Rifampicin": [["S", null, null, null]],
+                "Tetracycline": [["S", null, null, null]],
+                "Mupirocin": [["S", null, null, null]],
+                "FusidicAcid": [["S", null, null, null]],
+                "Clindamycin": [["S", null, null, null]],
+                "Vancomycin": [["S", null, null, null]]
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "sample1": {
+        "Success": true,
+        "foo": "bar"
+    },
+    "sample2": {
+        "Success": true,
+        "spam": "eggs"
+    }
+}

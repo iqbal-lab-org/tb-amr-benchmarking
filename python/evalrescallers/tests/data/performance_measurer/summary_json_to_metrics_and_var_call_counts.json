@@ -1,0 +1,61 @@
+{
+    "sample1": {
+        "tool1": {
+            "Success": true,
+            "resistance_calls": {
+                "Isoniazid": [["r", "gene1", "X42Y", {"conf": 42, "ref_depth": 0, "alt_depth": 10, "expected_depth": 11}]],
+                "Rifampicin": [["S", null, null, null]]
+            }
+        },
+        "tool2": {
+            "Success": false,
+            "resistance_calls": {}
+        }
+    },
+    "sample2": {
+        "tool1": {
+            "Success": true,
+            "resistance_calls": {
+                "Isoniazid": [["R", "gene1", "A1B", {"conf": 43, "ref_depth": 0, "alt_depth": 11, "expected_depth": 11}]],
+                "Rifampicin": [["R", "gene2", "C1D"], ["R", "gene2", "E2F", null]]
+            }
+        },
+        "tool2": {
+            "Success": true,
+            "resistance_calls": {
+                "Isoniazid": [["R", "gene1", "A1B", {"conf": 44, "ref_depth": 0, "alt_depth": 12, "expected_depth": 11}]]
+            }
+        }
+    },
+    "sample3": {
+        "tool1": {
+            "Success": true,
+            "resistance_calls": {
+                "Rifampicin": [["S", null, null, null]],
+                "Pyrazinamide": [["S", null, null, null]]
+            }
+        },
+        "tool2": {
+            "Success": true,
+            "resistance_calls": {
+                "Rifampicin": [["R", "gene2", "I42M", {"conf": 50, "ref_depth": 1, "alt_depth": 13, "expected_depth": 11}]],
+                "Pyrazinamide": [["S", null, null, null]]
+            }
+        }
+    },
+    "sample4": {
+        "tool1": {
+            "Success": true,
+            "resistance_calls": {
+                "Pyrazinamide": [["R", "gene3", "X10Y", {"conf": 100, "ref_depth": 2, "alt_depth": 14, "expected_depth": 11}]]
+            }
+        },
+        "tool2": {
+            "Success": true,
+            "resistance_calls": {
+                "Rifampicin": [["U", null, null, null]],
+                "Pyrazinamide": [["R", "gene3", "X10Y", {"conf": 1001, "ref_depth": 0, "alt_depth": 5, "expected_depth": 1100}]]
+            }
+        }
+    }
+}
