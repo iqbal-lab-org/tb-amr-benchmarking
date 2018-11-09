@@ -1,0 +1,121 @@
+Bootstrap: debootstrap
+OSVersion: bionic
+MirrorURL: http://us.archive.ubuntu.com/ubuntu/
+
+%environment
+    PATH=/bioinf-tools/:/bioinf-tools/TBProfiler/:/bioinf-tools/MTBseq_source-1.0.3/:$PATH
+    ARIBA_BOWTIE2=/bioinf-tools/bowtie2-2.2.9/bowtie2
+    ARIBA_CDHIT=cdhit-est
+
+%setup
+    mkdir $SINGULARITY_ROOTFS/mykrobeeval
+    rsync -a ../python ../nextflow $SINGULARITY_ROOTFS/mykrobeeval/
+
+
+%post
+    apt-get update
+    apt-get install -y software-properties-common
+    apt-add-repository universe
+    apt-get update
+    apt-get install -y \
+        build-essential \
+        cd-hit \
+        git \
+        libncurses5-dev \
+        libncursesw5-dev \
+        liblzma-dev \
+        libbz2-dev \
+        mummer \
+        openjdk-8-jdk-headless \
+        python-dev \
+        python-setuptools \
+        python3-dev \
+        python3-pip \
+        python3-setuptools \
+        r-base \
+        r-cran-ggplot2 \
+        samtools \
+        time \
+        unzip \
+        wget \
+        x11-apps \
+        zlib1g-dev
+
+    R -e 'install.packages(c("maps","mapplots", "mapdata"))'
+
+    mkdir /bioinf-tools
+
+    # ____________________ bowtie2 _______________________#
+    cd /bioinf-tools
+    wget -q http://downloads.sourceforge.net/project/bowtie-bio/bowtie2/2.2.9/bowtie2-2.2.9-linux-x86_64.zip
+    unzip bowtie2-2.2.9-linux-x86_64.zip
+    rm bowtie2-2.2.9-linux-x86_64.zip
+
+    #_______________________ ARIBA _______________________#
+    pip3 install ariba==2.12.1
+    export ARIBA_BOWTIE2=/bioinf-tools/bowtie2-2.2.9/bowtie2
+    export ARIBA_CDHIT=cdhit-est
+    ariba test ariba_test.out
+    rm -rf ariba_test.out
+
+    #_______________________ KvarQ ______________________#
+    # Get the tip of master as of time of writing this.
+    # Do not use latest release, because has a bug reading
+    # fastq files, which has since been fixed.
+    git clone https://github.com/kvarq/kvarq.git
+    cd kvarq
+    git checkout d693f561d205c9a3f9b9c705e2fefecdeb715cc8
+    python setup.py test
+    python setup.py install
+
+
+    #______________________ mykrobe _____________________#
+    cd /bioinf-tools
+    git clone https://github.com/martinghunt/mykrobe-atlas-cli.git mykrobe
+    cd mykrobe
+    git checkout 9968f6b77ce087d7ea049c55cad83c238a255f86
+    wget -O mykrobe-data.tar.gz https://goo.gl/DXb9hN
+    tar -zxvf mykrobe-data.tar.gz
+    rm -fr src/mykrobe/data
+    rm mykrobe-data.tar.gz
+    mv mykrobe-data src/mykrobe/data
+    pip3 install .
+
+
+    #______________________ MTBseq ______________________#
+    cd /bioinf-tools
+    wget https://github.com/ngs-fzb/MTBseq_source/archive/v1.0.3.tar.gz
+    tar xf v1.0.3.tar.gz
+    rm v1.0.3.tar.gz
+    chmod +x MTBseq_source-1.0.3/opt/* MTBseq_source-1.0.3/MTBseq
+    yes | cpan MCE Statistics::Basic
+
+    # Needs GATK in specific folder.
+    wget -O GenomeAnalysisTK-3.8-0-ge9d806836.tar.gz 'https://software.broadinstitute.org/gatk/download/auth?package=GATK-archive&version=3.8-0-ge9d806836'
+    tar xf GenomeAnalysisTK-3.8-0-ge9d806836.tar.gz
+    mv GenomeAnalysisTK-3.8-0-ge9d806836/GenomeAnalysisTK.jar MTBseq_source-1.0.3/opt/
+    rmdir GenomeAnalysisTK-3.8-0-ge9d806836
+    rm GenomeAnalysisTK-3.8-0-ge9d806836.tar.gz
+
+    # GATK requires exactly jave 8. This Ubuntu comes with 11
+    update-java-alternatives --set /usr/lib/jvm/java-1.8.0-openjdk-amd64
+
+
+    #______________________ TBProfiler __________________#
+    cd /bioinf-tools
+    git clone --recursive https://github.com/jodyphelan/TBProfiler.git
+    cd TBProfiler
+    git checkout 327e431c3e9de2897a885fabe6bfede1421b2470
+    bash install_prerequisites.sh
+
+    #______________________ nextflow ____________________#
+    cd /bioinf-tools
+    wget -qO- get.nextflow.io | bash
+    chmod 755 nextflow
+
+    #______________________ python code _________________#
+    cd /mykrobeeval/python
+    export PATH=/bioinf-tools/:/bioinf-tools/TBProfiler/:/bioinf-tools/MTBseq_source-1.0.3/:$PATH
+    python3 setup.py test
+    python3 setup.py install
+
