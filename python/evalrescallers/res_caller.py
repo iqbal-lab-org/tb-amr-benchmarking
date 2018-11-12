@@ -6,6 +6,7 @@ import re
 import shutil
 import subprocess
 import sys
+import time
 
 logging.basicConfig(level=logging.INFO)
 allowed_callers = {'KvarQ', 'MTBseq', 'Mykrobe', 'TB-Profiler'}
@@ -342,10 +343,17 @@ class ResCaller:
         if self.caller == 'KvarQ':
             command = [f'kvarq scan {command_line_opts} -l MTBC -t 1 -p {reads1} {self.json_results_file}']
         elif self.caller == 'MTBseq':
+            # MTBseq uses /tmp/ when sorting BAM files. This means
+            # we need a unique sample and/or library name, otherwise the
+            # filenames in /tmp/ are not guaranteed to be unique. See
+            # https://github.com/ngs-fzb/MTBseq_source/issues/22
+            # Use the PID, plus the current time for extra paranoia
+            sample = f'{os.getppid()}.{time.time()}'
+
             # Needs reads named in a specific way in the directory
             # where it is run. Make symlinks with the correct name
-            link1 = 'sampleID_libID_R1.fastq.gz'
-            link2 = 'sampleID_libID_R2.fastq.gz'
+            link1 = f'{sample}_libID_R1.fastq.gz'
+            link2 = f'{sample}_libID_R2.fastq.gz'
             try:
                 os.symlink(reads1, link1)
                 os.symlink(reads2, link2)
