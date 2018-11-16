@@ -4,3 +4,4 @@ Mykrobe	0	dir3	tb	panel_name	/path/to/probes	/path/to/var_to_res	--opt2 val2
 TB-Profiler	0	dir4	.	.	.	.	.
 KvarQ	1	dir5	.	.	.	.	.
 MTBseq	1	dir6	.	.	.	.	.
+ARIBA	0	dir7	.	ref_dir	.	.	.

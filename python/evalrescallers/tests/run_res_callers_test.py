@@ -18,6 +18,7 @@ class TestRunResCallers(unittest.TestCase):
             run_res_callers.Caller('TB-Profiler', False, 'dir4', None, None, None, None, None),
             run_res_callers.Caller('KvarQ', True, 'dir5', None, None, None, None, None),
             run_res_callers.Caller('MTBseq', True, 'dir6', None, None, None, None, None),
+            run_res_callers.Caller('ARIBA', False, 'dir7', None, 'ref_dir', None, None, None),
         ]
         infile = os.path.join(data_dir, 'load_callers_file.tsv')
         got = run_res_callers.load_callers_file(infile)

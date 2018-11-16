@@ -1,0 +1,24 @@
+{
+    "Ethambutol": [
+        [
+            "embA_upstream",
+            "C-12T"
+        ],
+        [
+            "embB",
+            "M306I"
+        ]
+    ],
+    "Isoniazid": [
+        [
+            "katG",
+            "S315T"
+        ]
+    ],
+    "Moxifloxacin": [
+        [
+            "gyrA",
+            "A90V"
+        ]
+    ]
+}

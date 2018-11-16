@@ -9,7 +9,7 @@ import sys
 import time
 
 logging.basicConfig(level=logging.INFO)
-allowed_callers = {'KvarQ', 'MTBseq', 'Mykrobe', 'TB-Profiler'}
+allowed_callers = {'ARIBA', 'KvarQ', 'MTBseq', 'Mykrobe', 'TB-Profiler'}
 tb_profiler_change_regex = re.compile(r'''^(?P<position>-?\d*)(?P<sequence>[A-Z\*]+)$''')
 kvarq_var_with_square_brackets_regex = re.compile(r'''^resistance.*\[.*=(?P<gene>.*)\.(?P<variant>[A-Z0-9]+)\]$''')
 
@@ -24,7 +24,10 @@ class ResCaller:
 
 
     def _clean_run_dir(self, skip=False):
-        if self.caller == 'KvarQ' or skip:
+        if self.caller == 'ARIBA':
+            json_old = os.path.join(self.outdir, 'ariba.out', 'tb.resistance.json')
+            os.rename(json_old, self.json_results_file)
+        elif self.caller == 'KvarQ' or skip:
             pass
         elif self.caller == 'MTBseq':
             to_delete = ['Amend', 'Bam', 'Classification', 'GATK_Bam', 'Groups', 'Joint', 'Mpileup', 'Position_Tables', 'Statistics']
@@ -176,7 +179,12 @@ class ResCaller:
         resistance_calls = {}
         quinolones = {'Ciprofloxacin', 'Moxifloxacin', 'Ofloxacin'}
 
-        if caller == 'KvarQ':
+        if caller == 'ARIBA':
+            for drug in json_data:
+                resistance_calls[drug] = []
+                for t in json_data[drug]:
+                    resistance_calls[drug].append(('R', t[0], t[1], None))
+        elif caller == 'KvarQ':
             try:
                 res_list = json_data['analyses']['MTBC/resistance']
             except:
@@ -319,7 +327,7 @@ class ResCaller:
         return stats
 
 
-    def run(self, reads1, reads2, mykrobe_species=None, mykrobe_panel=None, mykrobe_custom_probe_file=None, mykrobe_custom_var_to_res=None, debug=False, fake_for_fast_test=False, command_line_opts=None):
+    def run(self, reads1, reads2, mykrobe_species=None, mykrobe_panel=None, mykrobe_custom_probe_file=None, mykrobe_custom_var_to_res=None, debug=False, fake_for_fast_test=False, command_line_opts=None, ariba_ref=None):
         if command_line_opts is None:
             command_line_opts = ''
 
@@ -340,7 +348,11 @@ class ResCaller:
         os.chdir(self.outdir)
         logging.info(f'Output directory {self.outdir!r} set up for caller {self.caller}')
 
-        if self.caller == 'KvarQ':
+        if self.caller == 'ARIBA':
+            if ariba_ref is None or not os.path.exists(ariba_ref):
+                raise Exception(f'ARIBA ariba_ref not found: {ariba_ref}')
+            command = [f'ariba run {command_line_opts} --verbose {ariba_ref} {reads1} {reads2} ariba.out']
+        elif self.caller == 'KvarQ':
             command = [f'kvarq scan {command_line_opts} -l MTBC -t 1 -p {reads1} {self.json_results_file}']
         elif self.caller == 'MTBseq':
             # MTBseq uses /tmp/ when sorting BAM files. This means

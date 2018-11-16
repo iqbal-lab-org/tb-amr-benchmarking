@@ -1,0 +1,5 @@
+ARIBA run with this command:
+/usr/local/bin/ariba prepareref prepareref_tb z.ref
+from this directory: /home/vagrant/tb-amr-benchmarking/python/evalrescallers/tests/data/res_caller
+
+

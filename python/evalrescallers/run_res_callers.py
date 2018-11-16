@@ -13,7 +13,7 @@ Caller = collections.namedtuple('Caller', ['name', 'force', 'outdir_name', 'mykr
 
 def load_callers_file(infile):
     callers = []
-    allowed_callers = {'KvarQ', 'MTBseq', 'Mykrobe', 'TB-Profiler'}
+    allowed_callers = {'ARIBA', 'KvarQ', 'MTBseq', 'Mykrobe', 'TB-Profiler'}
     allowed_mykrobe_species = {'staph', 'tb'}
 
     with open(infile) as f:
@@ -24,7 +24,11 @@ def load_callers_file(infile):
             if command_line_opts == '.':
                 command_line_opts = None
 
-            if tool == 'Mykrobe':
+            if tool == 'ARIBA':
+                # We're also using mykrobe_panel column for the ariba reference directory.
+                assert mykrobe_panel != '.'
+                callers.append(Caller(tool, force, outdir_name, None, mykrobe_panel, None, None, command_line_opts))
+            elif tool == 'Mykrobe':
                 assert mykrobe_species in allowed_mykrobe_species
 
                 if mykrobe_species == 'staph':
@@ -100,6 +104,7 @@ def run_res_callers(callers_file, outdir, reads1, reads2, testing=False):
                 mykrobe_custom_var_to_res=caller.mykrobe_var_to_res,
                 fake_for_fast_test=testing,
                 command_line_opts=caller.command_line_opts,
+                ariba_ref=caller.mykrobe_panel,
             )
         except Exception:
             any_fails = True
