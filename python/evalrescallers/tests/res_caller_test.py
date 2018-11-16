@@ -145,7 +145,7 @@ class TestResCaller(unittest.TestCase):
         self.assertTrue(os.path.exists(os.path.join(tmp_dir, 'out.json')))
         self.assertTrue(os.path.exists(os.path.join(tmp_dir, 'summary.json')))
         self.assertTrue(os.path.exists(os.path.join(tmp_dir, 'command.out')))
-        #shutil.rmtree(tmp_dir)
+        shutil.rmtree(tmp_dir)
 
 
     def test_run_mtbseq(self):
