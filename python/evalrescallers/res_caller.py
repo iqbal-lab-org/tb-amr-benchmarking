@@ -24,7 +24,7 @@ class ResCaller:
 
 
     def _clean_run_dir(self, skip=False):
-        if self.caller == 'KvarQ' or self.caller == 'ariba' or skip:
+        if self.caller == 'KvarQ' or self.caller == 'ARIBA' or skip:
             pass
         elif self.caller == 'MTBseq':
             to_delete = ['Amend', 'Bam', 'Classification', 'GATK_Bam', 'Groups', 'Joint', 'Mpileup', 'Position_Tables', 'Statistics']
@@ -176,7 +176,12 @@ class ResCaller:
         resistance_calls = {}
         quinolones = {'Ciprofloxacin', 'Moxifloxacin', 'Ofloxacin'}
 
-        if caller == 'KvarQ':
+        if caller == 'ARIBA':
+            for drug in json_data:
+                resistance_calls[drug] = []
+                for t in json_data[drug]:
+                    resistance_calls[drug].append(('R', t[0], t[1], None))
+        elif caller == 'KvarQ':
             try:
                 res_list = json_data['analyses']['MTBC/resistance']
             except:

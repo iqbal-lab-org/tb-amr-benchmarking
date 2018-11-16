@@ -57,6 +57,20 @@ class TestResCaller(unittest.TestCase):
             res_caller.ResCaller._tb_profiler_var_string_parser('42C>43G')
 
 
+
+    def test_json_to_resistance_calls_ARIBA(self):
+        '''test _json_to_resistance_calls with ARIBA'''
+        json_file = os.path.join(data_dir, 'json_to_resistance_calls.ARIBA.json')
+        expected = {
+            'Ethambutol': [('R', 'embA_upstream', 'C-12T', None), ('R', 'embB', 'M306I', None)],
+            'Isoniazid': [('R', 'katG', 'S315T', None)],
+            'Moxifloxacin': [('R', 'gyrA', 'A90V', None)],
+        }
+        got = res_caller.ResCaller._json_to_resistance_calls(json_file, 'ARIBA')
+        self.assertEqual(expected, got)
+
+
+
     def test_json_to_resistance_calls_KvarQ(self):
         '''test _json_to_resistance_calls with KvarQ'''
         json_file = os.path.join(data_dir, 'json_to_resistance_calls.KvarQ.json')
