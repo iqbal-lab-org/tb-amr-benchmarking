@@ -134,6 +134,20 @@ class TestResCaller(unittest.TestCase):
         self.assertEqual(expected, got)
 
 
+    def test_run_ariba(self):
+        '''test run ARIBA'''
+        reads1 = os.path.join(data_dir, 'reads_1.fastq.gz')
+        reads2 = os.path.join(data_dir, 'reads_2.fastq.gz')
+        tmp_dir = 'tmp.res_caller.run.ARIBA'
+        caller = res_caller.ResCaller('ARIBA', tmp_dir)
+        ariba_ref = os.path.join(data_dir, 'ariba.ref')
+        caller.run(reads1, reads2, mykrobe_species='tb', ariba_ref=ariba_ref)
+        self.assertTrue(os.path.exists(os.path.join(tmp_dir, 'out.json')))
+        self.assertTrue(os.path.exists(os.path.join(tmp_dir, 'summary.json')))
+        self.assertTrue(os.path.exists(os.path.join(tmp_dir, 'command.out')))
+        #shutil.rmtree(tmp_dir)
+
+
     def test_run_mtbseq(self):
         '''test run MTBseq'''
         reads1 = os.path.join(data_dir, 'reads_for_MTBseq_1.fastq.gz')

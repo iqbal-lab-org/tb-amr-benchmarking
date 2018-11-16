@@ -1,0 +1,14 @@
+cluster	ahpC_upstream
+cluster_1	eis_upstream
+cluster_10	embB
+cluster_11	gid
+cluster_12	gyrA
+cluster_13	inhA
+cluster_2	katG
+cluster_3	pncA
+cluster_4	rpoB
+cluster_5	rpsL
+cluster_6	embA_upstream
+cluster_7	fabG1_upstream
+cluster_8	pncA_upstream
+cluster_9	rrs

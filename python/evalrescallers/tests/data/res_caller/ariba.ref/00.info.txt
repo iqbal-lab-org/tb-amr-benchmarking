@@ -1,0 +1,3 @@
+input fasta file:	/home/vagrant/tb-amr-benchmarking/python/evalrescallers/tests/data/res_caller/z.ref.tmp0rwqgy84/out.fa
+input tsv file:	/home/vagrant/tb-amr-benchmarking/python/evalrescallers/tests/data/res_caller/z.ref.tmp0rwqgy84/out.tsv
+genetic_code	11
