@@ -52,7 +52,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     rm bowtie2-2.2.9-linux-x86_64.zip
 
     #_______________________ ARIBA _______________________#
-    pip3 install ariba==2.12.1
+    pip3 install ariba==2.13.1
     export ARIBA_BOWTIE2=/bioinf-tools/bowtie2-2.2.9/bowtie2
     export ARIBA_CDHIT=cdhit-est
     ariba test ariba_test.out
