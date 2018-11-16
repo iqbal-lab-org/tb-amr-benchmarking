@@ -104,6 +104,7 @@ def run_res_callers(callers_file, outdir, reads1, reads2, testing=False):
                 mykrobe_custom_var_to_res=caller.mykrobe_var_to_res,
                 fake_for_fast_test=testing,
                 command_line_opts=caller.command_line_opts,
+                ariba_ref=caller.mykrobe_panel,
             )
         except Exception:
             any_fails = True
