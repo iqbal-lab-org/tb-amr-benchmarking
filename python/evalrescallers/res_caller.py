@@ -9,7 +9,7 @@ import sys
 import time
 
 logging.basicConfig(level=logging.INFO)
-allowed_callers = {'KvarQ', 'MTBseq', 'Mykrobe', 'TB-Profiler'}
+allowed_callers = {'ARIBA', 'KvarQ', 'MTBseq', 'Mykrobe', 'TB-Profiler'}
 tb_profiler_change_regex = re.compile(r'''^(?P<position>-?\d*)(?P<sequence>[A-Z\*]+)$''')
 kvarq_var_with_square_brackets_regex = re.compile(r'''^resistance.*\[.*=(?P<gene>.*)\.(?P<variant>[A-Z0-9]+)\]$''')
 
@@ -24,7 +24,7 @@ class ResCaller:
 
 
     def _clean_run_dir(self, skip=False):
-        if self.caller == 'KvarQ' or skip:
+        if self.caller == 'KvarQ' or self.caller == 'ariba' or skip:
             pass
         elif self.caller == 'MTBseq':
             to_delete = ['Amend', 'Bam', 'Classification', 'GATK_Bam', 'Groups', 'Joint', 'Mpileup', 'Position_Tables', 'Statistics']
