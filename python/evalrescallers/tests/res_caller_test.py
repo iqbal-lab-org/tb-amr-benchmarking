@@ -65,6 +65,8 @@ class TestResCaller(unittest.TestCase):
             'Ethambutol': [('R', 'embA_upstream', 'C-12T', None), ('R', 'embB', 'M306I', None)],
             'Isoniazid': [('R', 'katG', 'S315T', None)],
             'Moxifloxacin': [('R', 'gyrA', 'A90V', None)],
+            'Ofloxacin': [('R', 'gyrA', 'A90V', None)],
+            'Quinolones': [('R', 'gyrA', 'A90V', None)],
         }
         got = res_caller.ResCaller._json_to_resistance_calls(json_file, 'ARIBA')
         self.assertEqual(expected, got)
