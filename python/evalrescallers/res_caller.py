@@ -180,10 +180,18 @@ class ResCaller:
         quinolones = {'Ciprofloxacin', 'Moxifloxacin', 'Ofloxacin'}
 
         if caller == 'ARIBA':
+            quinolone_calls = set()
+
             for drug in json_data:
                 resistance_calls[drug] = []
                 for t in json_data[drug]:
-                    resistance_calls[drug].append(('R', t[0], t[1], None))
+                    to_append = ('R', t[0], t[1], None)
+                    resistance_calls[drug].append(to_append)
+                    if drug in quinolones:
+                        quinolone_calls.add(to_append)
+
+            if len(quinolone_calls) > 0:
+                resistance_calls['Quinolones'] = sorted(list(quinolone_calls))
         elif caller == 'KvarQ':
             try:
                 res_list = json_data['analyses']['MTBC/resistance']
