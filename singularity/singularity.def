@@ -71,9 +71,9 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 
     #______________________ mykrobe _____________________#
     cd /bioinf-tools
-    git clone https://github.com/martinghunt/mykrobe-atlas-cli.git mykrobe
+    git clone https://github.com/Mykrobe-tools/mykrobe-atlas-cli.git mykrobe
     cd mykrobe
-    git checkout 9968f6b77ce087d7ea049c55cad83c238a255f86
+    git checkout 5a939c88ba3ae799274a55e43de9a3f8a2416c93
     wget -O mykrobe-data.tar.gz https://goo.gl/DXb9hN
     tar -zxvf mykrobe-data.tar.gz
     rm -fr src/mykrobe/data
