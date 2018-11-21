@@ -4,8 +4,8 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 
 %environment
     PATH=/bioinf-tools/:/bioinf-tools/TBProfiler/:/bioinf-tools/MTBseq_source-1.0.3/:$PATH
-    ARIBA_BOWTIE2=/bioinf-tools/bowtie2-2.2.9/bowtie2
-    ARIBA_CDHIT=cdhit-est
+    export ARIBA_BOWTIE2=/bioinf-tools/bowtie2-2.2.9/bowtie2
+    export ARIBA_CDHIT=cdhit-est
 
 %setup
     mkdir $SINGULARITY_ROOTFS/mykrobeeval
