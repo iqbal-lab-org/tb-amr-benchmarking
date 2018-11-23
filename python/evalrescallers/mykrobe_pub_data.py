@@ -1,3 +1,4 @@
+import csv
 import os
 
 import evalrescallers
@@ -43,6 +44,17 @@ def load_nature_suppl_file(infile, species):
             sample_to_res[sample] = res_data
 
     return all_drugs, sample_to_res
+
+
+def load_sample_to_country_file(infile):
+    sample_to_country = {}
+    with open(infile) as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for d in reader:
+            assert d['comid'] not in sample_to_country
+            sample_to_country[d['comid']] = d['country']
+
+    return sample_to_country
 
 
 def load_all_nature_suppl_files(species):

@@ -40,6 +40,17 @@ class TestMykrobePubData(unittest.TestCase):
         self.assertEqual(expect_sample_to_res, got_sample_to_res)
 
 
+    def test_load_sample_to_country_file(self):
+        '''test load_sample_to_country_file'''
+        expect = {
+            'id1': 'country1',
+            'id2': 'country2',
+        }
+        infile = os.path.join(data_dir, 'load_sample_to_country_file.tsv')
+        got = mykrobe_pub_data.load_sample_to_country_file(infile)
+        self.assertEqual(expect, got)
+
+
     def test_load_all_nature_suppl_files_tb(self):
         '''test load_all_nature_suppl_files tb data'''
         input_dir = os.path.join(data_dir, 'load_all_nature_suppl_files')
