@@ -5,6 +5,7 @@ import evalrescallers
 
 eval_dir = os.path.abspath(os.path.dirname(evalrescallers.__file__))
 publication_suppl_files_dir = os.path.join(eval_dir, 'data')
+tb_comid_to_country = None
 
 
 def load_nature_suppl_file(infile, species):
@@ -14,6 +15,10 @@ def load_nature_suppl_file(infile, species):
     sample_to_res = {}
     all_drugs = set()
     first_drug_columns = {'tb': 4, 'staph': 6}
+    sample_to_country = {}
+    if species == 'tb' and tb_comid_to_country is None:
+        country_file = os.path.join(publication_suppl_files_dir, 'ncomms_countries.tsv')
+        comid_to_country = load_sample_to_country_file(country_file)
 
     with open(infile) as f:
         for line in f:
@@ -41,9 +46,11 @@ def load_nature_suppl_file(infile, species):
                 if res_data.get('Ciprofloxacin', None) == 'S' and res_data.get('Moxifloxacin', None) == 'S':
                     res_data['Quinolones'] = 'S'
 
+                sample_to_country[sample] = comid_to_country[fields[1]]
+
             sample_to_res[sample] = res_data
 
-    return all_drugs, sample_to_res
+    return all_drugs, sample_to_res, sample_to_country
 
 
 def load_sample_to_country_file(infile):
@@ -72,9 +79,11 @@ def load_all_nature_suppl_files(species):
     assert species in files
     all_drugs = set()
     sample_to_res = {}
+    sample_to_country = {}
 
     for filename in files[species]:
-        new_drugs, new_results = load_nature_suppl_file(os.path.join(publication_suppl_files_dir, filename), species)
+        new_drugs, new_results, new_countries = load_nature_suppl_file(os.path.join(publication_suppl_files_dir, filename), species)
+        sample_to_country.update(new_countries)
         all_drugs.update(new_drugs)
         for sample in new_results:
             # some samples are in >1 file. But some calls are
@@ -89,5 +98,5 @@ def load_all_nature_suppl_files(species):
             else:
                 sample_to_res[sample] = new_results[sample]
 
-    return all_drugs, sample_to_res
+    return all_drugs, sample_to_res, sample_to_country
 
