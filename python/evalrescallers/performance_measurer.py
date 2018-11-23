@@ -10,7 +10,7 @@ class PerformanceMeasurer:
         assert species in ('tb', 'staph')
         self.species = species
         self.r_means_resistant = r_means_resistant
-        mykrobe_drugs, mykrobe_pheno = mykrobe_pub_data.load_all_nature_suppl_files(self.species)
+        mykrobe_drugs, mykrobe_pheno, mykrobe_countries = mykrobe_pub_data.load_all_nature_suppl_files(self.species)
         self.truth_pheno = {}
         self.drugs = {'mykrobe': mykrobe_drugs}
         datasets = {'mykrobe': mykrobe_pheno}
