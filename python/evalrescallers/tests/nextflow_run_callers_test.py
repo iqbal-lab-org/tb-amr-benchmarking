@@ -83,14 +83,7 @@ class TestNextflowRunCallers(unittest.TestCase):
 
         shutil.rmtree(work_dir)
 
-
         self.assertTrue(os.path.exists(os.path.join(outdir, 'summary.json')))
-
-        for r_string in ['r_is_resistant', 'r_is_susceptible']:
-            prefix = os.path.join(outdir, f'summary.{r_string}.')
-            for suffix in ['accuracy_stats.tsv'] + [f'variant_counts.{x}.tsv' for x in tools]:
-                self.assertTrue(os.path.exists(prefix + suffix))
-
         shutil.rmtree(outdir)
 
 

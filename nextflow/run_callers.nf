@@ -122,8 +122,6 @@ process summarise {
 
     """
     evalrescallers make_summary_json --threads ${params.summarise_threads} ${caller_output_dir} ${summary_output_prefix}.json
-    evalrescallers summary_json_to_stats ${params.species} ${summary_output_prefix}.json ${summary_output_prefix}.r_is_resistant
-    evalrescallers summary_json_to_stats --r_means_susceptible ${params.species} ${summary_output_prefix}.json ${summary_output_prefix}.r_is_susceptible
     touch summary_done
     """
 }

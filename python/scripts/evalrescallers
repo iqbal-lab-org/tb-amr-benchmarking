@@ -54,20 +54,6 @@ subparser_make_summary_json.add_argument('outfile', help='Name of output JSON fi
 subparser_make_summary_json.set_defaults(func=evalrescallers.tasks.make_summary_json.run)
 
 
-#----------------------- summary_json_to_stats -----------------------
-subparser_summary_json_to_stats = subparsers.add_parser(
-    'summary_json_to_stats',
-    help='Generates stats from JSON made by make_summary_json',
-    usage='evalrescallers summary_json_to_stats <tb|staph> <in.json> <outprefix>',
-)
-
-subparser_summary_json_to_stats.add_argument('--r_means_susceptible', action='store_true', help='Use this option to count "r" calls as susceptible, instead of default of resistant')
-subparser_summary_json_to_stats.add_argument('species', choices=['tb', 'staph'], help='species (must be tb or staph)')
-subparser_summary_json_to_stats.add_argument('infile', help='Name of input JSON file')
-subparser_summary_json_to_stats.add_argument('outprefix', help='Prefix of output files')
-subparser_summary_json_to_stats.set_defaults(func=evalrescallers.tasks.summary_json_to_stats.run)
-
-
 #-------------------------- download_nejm_reads ----------------------
 subparser_download_nejm_reads = subparsers.add_parser(
     'download_nejm_reads',
@@ -77,20 +63,6 @@ subparser_download_nejm_reads = subparsers.add_parser(
 subparser_download_nejm_reads.add_argument('outdir', help='Name of output directory')
 subparser_download_nejm_reads.add_argument('--threads', type=int, help='Number of simultaneous downloads. Too many and you will get blocked [%(default)s]', default=1)
 subparser_download_nejm_reads.set_defaults(func=evalrescallers.tasks.download_nejm_reads.run)
-
-
-#------------------------ make_res_susc_bar_charts -------------------
-subparser_make_res_susc_bar_charts = subparsers.add_parser(
-    'make_res_susc_bar_charts',
-    help='Makes bar charts of resistant and susceptible samples with counts per tool',
-    usage='evalrescallers make_res_susc_bar_charts <infile> <datasets> <tools> <drugs> <outprefix>',
-)
-subparser_make_res_susc_bar_charts.add_argument('infile', help='Name of input file. Should be accuracy_stats.tsv made by summary_json_to_stats')
-subparser_make_res_susc_bar_charts.add_argument('datasets', help='Comma separated list of datasets (eg mykrobe,10k_validate,10k_test')
-subparser_make_res_susc_bar_charts.add_argument('tools', help='Tools and labels to use in plots (eg Mykrobe,MYK,TB-Profiler,TBF')
-subparser_make_res_susc_bar_charts.add_argument('drugs', help='Drugs and labels to use in plots (eg pyrazinamide,PZA,Ethambutol,EMB')
-subparser_make_res_susc_bar_charts.add_argument('outprefix', help='Prefix of output files')
-subparser_make_res_susc_bar_charts.set_defaults(func=evalrescallers.tasks.make_res_susc_bar_charts.run)
 
 
 #----------------------------- version -------------------------------
