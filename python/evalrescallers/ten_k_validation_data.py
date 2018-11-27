@@ -21,6 +21,7 @@ sources_file = os.path.join(data_dir, '10k_validation.sample_sources.tsv')
 def load_sample_to_res_file(infile):
     sample_to_res = {}
     added_quinolones = False
+    quinolones = {'Ciprofloxacin', 'Moxifloxacin', 'Ofloxacin'}
 
     with open(infile) as f:
         tsv_reader = csv.DictReader(f, delimiter='\t')
@@ -30,10 +31,11 @@ def load_sample_to_res_file(infile):
         for row in tsv_reader:
             assert row['ena_id'] not in data
             data[row['ena_id']] = {drug: row[drug] for drug in drugs}
-            if row.get('Ciprofloxacin', None) == 'R' or row.get('Moxifloxacin', None) == 'R':
+            quinolone_res = [row.get(q, None) for q in quinolones]
+            if 'R' in quinolone_res:
                 data[row['ena_id']]['Quinolones'] = 'R'
                 added_quinolones = True
-            if row.get('Ciprofloxacin', None) == 'S' and row.get('Moxifloxacin', None) == 'S':
+            elif set(quinolone_res) == {'S'}:
                 data[row['ena_id']]['Quinolones'] = 'S'
                 added_quinolones = True
 
