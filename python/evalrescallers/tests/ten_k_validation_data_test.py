@@ -51,7 +51,7 @@ class TestTenKValidationData(unittest.TestCase):
 
     def test_load_all_data(self):
         '''test load_all_data'''
-        expected_drugs = {'Isoniazid', 'Rifampicin', 'Ethambutol', 'Pyrazinamide', 'Amikacin', 'Capreomycin', 'Ciprofloxacin', 'Cycloserine', 'Ethionamide', 'Kanamycin', 'Linezolid', 'Moxifloxacin', 'Ofloxacin', 'PAS', 'Rifabutin', 'Streptomycin'}
+        expected_drugs = {'Quinolones', 'Isoniazid', 'Rifampicin', 'Ethambutol', 'Pyrazinamide', 'Amikacin', 'Capreomycin', 'Ciprofloxacin', 'Cycloserine', 'Ethionamide', 'Kanamycin', 'Linezolid', 'Moxifloxacin', 'Ofloxacin', 'PAS', 'Rifabutin', 'Streptomycin'}
         got_drugs, got_pheno_validation, got_pheno_test, got_predict = ten_k_validation_data.load_all_data()
         self.assertEqual(expected_drugs, got_drugs)
         _, expect_pheno = ten_k_validation_data.load_sample_to_res_file(os.path.join(ten_k_validation_data.data_dir, '10k_validation.phenotype.tsv'))
