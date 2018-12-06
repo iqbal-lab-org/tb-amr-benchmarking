@@ -12,6 +12,7 @@ class TestRunResCallers(unittest.TestCase):
     def test_load_callers_file(self):
         '''test load_callers_file'''
         expected = [
+            run_res_callers.Caller('Mykrobe', False, 'dir0', 'staph', 'panel_name', '/path/to/probes', '/path/to/var_to_res', '--opt1 val1'),
             run_res_callers.Caller('Mykrobe', True, 'dir1', 'staph', None, None, None, '--opt1 val1'),
             run_res_callers.Caller('Mykrobe', True, 'dir2', 'tb', 'walker-2015', None, None, None),
             run_res_callers.Caller('Mykrobe', False, 'dir3', 'tb', 'panel_name', '/path/to/probes', '/path/to/var_to_res', '--opt2 val2'),

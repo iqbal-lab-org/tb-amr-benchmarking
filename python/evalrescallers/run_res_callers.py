@@ -31,7 +31,7 @@ def load_callers_file(infile):
             elif tool == 'Mykrobe':
                 assert mykrobe_species in allowed_mykrobe_species
 
-                if mykrobe_species == 'staph':
+                if mykrobe_species == 'staph' and mykrobe_probes == '.':
                     callers.append(Caller(tool, force, outdir_name, mykrobe_species, None, None, None, command_line_opts))
                 elif mykrobe_panel in {'bradley-2015', 'walker-2015', 'Fail'}:
                     callers.append(Caller(tool, force,outdir_name,  mykrobe_species, mykrobe_panel, None, None, command_line_opts))
