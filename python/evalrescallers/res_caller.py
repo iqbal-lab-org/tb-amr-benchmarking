@@ -387,14 +387,13 @@ class ResCaller:
             assert mykrobe_species in ['tb', 'staph']
             command = [f'mykrobe predict sample {mykrobe_species} {command_line_opts}']
 
-            if mykrobe_species == 'tb':
-                if mykrobe_custom_probe_file is not None or mykrobe_custom_var_to_res is not None:
-                    assert None not in {mykrobe_custom_probe_file, mykrobe_custom_var_to_res}
-                    mykrobe_panel = 'custom'
-                    command.append(f'--panel custom --custom_probe_set_path {mykrobe_custom_probe_file} --custom_variant_to_resistance_json {mykrobe_custom_var_to_res}')
-                else:
-                    assert mykrobe_panel is not None
-                    command.append(f'--panel {mykrobe_panel}')
+            if mykrobe_custom_probe_file is not None or mykrobe_custom_var_to_res is not None:
+                assert None not in {mykrobe_custom_probe_file, mykrobe_custom_var_to_res}
+                mykrobe_panel = 'custom'
+                command.append(f'--panel custom --custom_probe_set_path {mykrobe_custom_probe_file} --custom_variant_to_resistance_json {mykrobe_custom_var_to_res}')
+            elif mykrobe_species == 'tb':
+                assert mykrobe_panel is not None
+                command.append(f'--panel {mykrobe_panel}')
 
             command.append(f'--seq {reads1} {reads2} --output {self.json_results_file}')
         elif self.caller == 'TB-Profiler':
