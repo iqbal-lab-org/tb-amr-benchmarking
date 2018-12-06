@@ -136,7 +136,7 @@ class TestResCaller(unittest.TestCase):
         self.assertEqual(expected, got)
 
 
-    def _test_run_ariba(self):
+    def test_run_ariba(self):
         '''test run ARIBA'''
         reads1 = os.path.join(data_dir, 'reads_1.fastq.gz')
         reads2 = os.path.join(data_dir, 'reads_2.fastq.gz')
@@ -150,7 +150,7 @@ class TestResCaller(unittest.TestCase):
         shutil.rmtree(tmp_dir)
 
 
-    def _test_run_mtbseq(self):
+    def test_run_mtbseq(self):
         '''test run MTBseq'''
         reads1 = os.path.join(data_dir, 'reads_for_MTBseq_1.fastq.gz')
         reads2 = os.path.join(data_dir, 'reads_for_MTBseq_2.fastq.gz')
@@ -163,7 +163,7 @@ class TestResCaller(unittest.TestCase):
         shutil.rmtree(tmp_dir)
 
 
-    def _test_run_mykrobe(self):
+    def test_run_mykrobe(self):
         '''test run Mykrobe'''
         reads1 = os.path.join(data_dir, 'reads_1.fastq.gz')
         reads2 = os.path.join(data_dir, 'reads_2.fastq.gz')
@@ -176,7 +176,7 @@ class TestResCaller(unittest.TestCase):
         shutil.rmtree(tmp_dir)
 
 
-    def _test_run_tb_profiler(self):
+    def test_run_tb_profiler(self):
         '''test run TB-Profiler'''
         reads1 = os.path.join(data_dir, 'reads_1.fastq.gz')
         reads2 = os.path.join(data_dir, 'reads_2.fastq.gz')
@@ -189,7 +189,7 @@ class TestResCaller(unittest.TestCase):
         shutil.rmtree(tmp_dir)
 
 
-    def _test_run_kvarq(self):
+    def test_run_kvarq(self):
         '''test run KvarQ'''
         reads1 = os.path.join(data_dir, 'reads_1.fastq.gz')
         reads2 = os.path.join(data_dir, 'reads_2.fastq.gz')
