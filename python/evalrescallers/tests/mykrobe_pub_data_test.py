@@ -15,7 +15,7 @@ class TestMykrobePubData(unittest.TestCase):
         '''test load_nature_suppl_file tb data'''
         infile = os.path.join(data_dir, 'load_nature_suppl_file.tb.txt')
         got_drugs, got_sample_to_res, got_sample_to_country = mykrobe_pub_data.load_nature_suppl_file(infile, 'tb')
-        expect_drugs = {'Kanamycin', 'Streptomycin', 'Ciprofloxacin', 'Rifampicin', 'Amikacin', 'Amoxicillin', 'Isoniazid', 'Moxifloxacin', 'Capreomycin', 'Ethambutol', 'Quinolones'}
+        expect_drugs = {'Kanamycin', 'Streptomycin', 'Ciprofloxacin', 'Rifampicin', 'Amikacin', 'Ofloxacin', 'Isoniazid', 'Moxifloxacin', 'Capreomycin', 'Ethambutol', 'Quinolones'}
         expect_sample_to_res = {
                 'SRR2100187': {'Rifampicin': 'S', 'Isoniazid': 'R', 'Ethambutol': 'S', 'Ciprofloxacin': 'S', 'Moxifloxacin': 'R', 'Quinolones': 'R'},
             'SRR2100184': {'Rifampicin': 'S', 'Isoniazid': 'S', 'Ethambutol': 'S', 'Ciprofloxacin': 'S', 'Moxifloxacin': 'S', 'Quinolones': 'S'},
@@ -57,7 +57,7 @@ class TestMykrobePubData(unittest.TestCase):
         '''test load_all_nature_suppl_files tb data'''
         input_dir = os.path.join(data_dir, 'load_all_nature_suppl_files')
         got_drugs, got_sample_to_res, got_sample_to_country = mykrobe_pub_data.load_all_nature_suppl_files('tb')
-        expect_drugs = {'Kanamycin', 'Streptomycin', 'Ciprofloxacin', 'Rifampicin', 'Amikacin', 'Amoxicillin', 'Isoniazid', 'Moxifloxacin', 'Capreomycin', 'Ethambutol', 'Quinolones'}
+        expect_drugs = {'Kanamycin', 'Streptomycin', 'Ciprofloxacin', 'Rifampicin', 'Amikacin', 'Ofloxacin', 'Isoniazid', 'Moxifloxacin', 'Capreomycin', 'Ethambutol', 'Quinolones'}
         expect_sample_to_res = {}
         expect_sample_to_country = {}
         for i in '7', '8', '9', '10':

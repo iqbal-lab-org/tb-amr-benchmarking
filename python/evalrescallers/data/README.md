@@ -12,4 +12,10 @@ Convert to unix format:
 
     ls ncomms10063-s* | xargs mac2unix
 
+Fix typo drug name:
+
+    sed -i 's/Amoxicillin/Ofloxacin/' ncomms10063-s7.txt
+    sed -i 's/Amoxicillin/Ofloxacin/' ncomms10063-s8.txt
+    sed -i 's/Amoxicillin/Ofloxacin/' ncomms10063-s9.txt
+    sed -i 's/Amoxicillin/Ofloxacin/' ncomms10063-s10.txt
 

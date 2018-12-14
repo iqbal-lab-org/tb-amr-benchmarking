@@ -1,5 +1,5 @@
 "Supplementary Data 6. R - Resistance, S - Susceptible"													
-sample_set	comid	sra_accessions	species	Rifampicin	Isoniazid	Ethambutol	Kanamycin	Capreomycin	Amikacin	Streptomycin	Ciprofloxacin	Moxifloxacin	Amoxicillin
+sample_set	comid	sra_accessions	species	Rifampicin	Isoniazid	Ethambutol	Kanamycin	Capreomycin	Amikacin	Streptomycin	Ciprofloxacin	Moxifloxacin	Ofloxacin
 MTBC_A1	C00000575	ERR025839	tuberculosis	S	S	S	 	 	 	 	 	 	 
 MTBC_A1	C00000581	ERR025846	tuberculosis	S	S	S	 	 	 	 	 	 	 
 MTBC_A1	C00003749	ERR038257	tuberculosis	S	S	S	 	 	 	 	 	 	 
