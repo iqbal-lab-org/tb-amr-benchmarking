@@ -22,7 +22,7 @@ class TestWhoTreatment(unittest.TestCase):
 
         phenos['Isoniazid'] = 'R'
         profile = who_treatment.DstProfile(phenos)
-        self.assertEqual(3, profile.regimen.number)
+        self.assertEqual(2, profile.regimen.number)
 
         phenos['Moxifloxacin'] = 'S'
         profile = who_treatment.DstProfile(phenos)

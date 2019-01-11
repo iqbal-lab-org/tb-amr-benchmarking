@@ -220,12 +220,10 @@ class DstProfile:
 
         if first_line_tuple == ('S', 'S', 'S', 'S'):
             self.regimen = regimens[1]
-        elif first_line_tuple == ('R', 'S', 'S', 'S') and self.phenos['Moxifloxacin'] == 'S':
-            self.regimen = regimens[2]
         elif first_line_tuple == ('R', 'S', 'S', 'S') and self.phenos['Moxifloxacin'] == 'R':
             self.regimen = regimens[3]
         elif first_line_tuple == ('R', 'S', 'S', 'S'):
-            self.regimen = regimens[3]
+            self.regimen = regimens[2]
         elif first_line_tuple == ('R', 'S', 'R', 'S'):
             self.regimen = regimens[4]
         elif first_line_tuple == ('R', 'S', 'S', 'R'):
