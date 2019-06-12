@@ -8,7 +8,7 @@ data_dir = os.path.join(modules_dir, 'tests', 'data', 'who_treatment')
 
 
 class TestWhoTreatment(unittest.TestCase):
-    def test_dst_profile_gets_correct_regimen(self):
+    def test_dst_profile_gets_correct_regimen_2017(self):
         '''test DstProfile gets correct regimen'''
         phenos = {
             'Isoniazid': 'S',
@@ -17,19 +17,19 @@ class TestWhoTreatment(unittest.TestCase):
             'Ethambutol': 'S',
         }
 
-        profile = who_treatment.DstProfile(phenos)
+        profile = who_treatment.DstProfile(phenos, 2017)
         self.assertEqual(1, profile.regimen.number)
 
         phenos['Isoniazid'] = 'R'
-        profile = who_treatment.DstProfile(phenos)
+        profile = who_treatment.DstProfile(phenos, 2017)
         self.assertEqual(2, profile.regimen.number)
 
         phenos['Moxifloxacin'] = 'S'
-        profile = who_treatment.DstProfile(phenos)
+        profile = who_treatment.DstProfile(phenos, 2017)
         self.assertEqual(2, profile.regimen.number)
 
         phenos['Moxifloxacin'] = 'R'
-        profile = who_treatment.DstProfile(phenos)
+        profile = who_treatment.DstProfile(phenos, 2017)
         self.assertEqual(3, profile.regimen.number)
 
         phenos = {
@@ -38,7 +38,7 @@ class TestWhoTreatment(unittest.TestCase):
             'Pyrazinamide': 'R',
             'Ethambutol': 'S',
         }
-        profile = who_treatment.DstProfile(phenos)
+        profile = who_treatment.DstProfile(phenos, 2017)
         self.assertEqual(4, profile.regimen.number)
 
         phenos = {
@@ -47,7 +47,7 @@ class TestWhoTreatment(unittest.TestCase):
             'Pyrazinamide': 'S',
             'Ethambutol': 'R',
         }
-        profile = who_treatment.DstProfile(phenos)
+        profile = who_treatment.DstProfile(phenos, 2017)
         self.assertEqual(5, profile.regimen.number)
 
         phenos = {
@@ -56,13 +56,13 @@ class TestWhoTreatment(unittest.TestCase):
             'Pyrazinamide': 'R',
             'Ethambutol': 'R',
         }
-        profile = who_treatment.DstProfile(phenos)
+        profile = who_treatment.DstProfile(phenos, 2017)
         self.assertEqual(6, profile.regimen.number)
         phenos['Kanamycin'] = 'R'
         phenos['Amikacin'] = 'R'
         phenos['Capreomycin'] = 'R'
         phenos['Streptomycin'] = 'S'
-        profile = who_treatment.DstProfile(phenos)
+        profile = who_treatment.DstProfile(phenos, 2017)
         self.assertEqual(7, profile.regimen.number)
 
         phenos = {
@@ -71,7 +71,7 @@ class TestWhoTreatment(unittest.TestCase):
             'Pyrazinamide': 'R',
             'Ethambutol': 'S',
         }
-        profile = who_treatment.DstProfile(phenos)
+        profile = who_treatment.DstProfile(phenos, 2017)
         self.assertEqual(8, profile.regimen.number)
 
         phenos = {
@@ -80,13 +80,13 @@ class TestWhoTreatment(unittest.TestCase):
             'Pyrazinamide': 'S',
             'Ethambutol': 'R',
         }
-        profile = who_treatment.DstProfile(phenos)
+        profile = who_treatment.DstProfile(phenos, 2017)
         self.assertEqual(9, profile.regimen.number)
 
         phenos = {
             'Rifampicin': 'R',
         }
-        profile = who_treatment.DstProfile(phenos)
+        profile = who_treatment.DstProfile(phenos, 2017)
         self.assertEqual(10, profile.regimen.number)
 
         phenos = {
@@ -94,14 +94,14 @@ class TestWhoTreatment(unittest.TestCase):
             'Kanamycin': 'S',
             'Moxifloxacin': 'S',
         }
-        profile = who_treatment.DstProfile(phenos)
+        profile = who_treatment.DstProfile(phenos, 2017)
         self.assertEqual(11, profile.regimen.number)
 
         phenos = {
             'Isoniazid': 'R',
             'Rifampicin': 'R',
         }
-        profile = who_treatment.DstProfile(phenos)
+        profile = who_treatment.DstProfile(phenos, 2017)
         self.assertEqual(10, profile.regimen.number)
 
         phenos = {
@@ -110,7 +110,7 @@ class TestWhoTreatment(unittest.TestCase):
             'Kanamycin': 'S',
             'Moxifloxacin': 'S',
         }
-        profile = who_treatment.DstProfile(phenos)
+        profile = who_treatment.DstProfile(phenos, 2017)
         self.assertEqual(11, profile.regimen.number)
 
         phenos = {
@@ -118,8 +118,113 @@ class TestWhoTreatment(unittest.TestCase):
             'Rifampicin': 'R',
             'Moxifloxacin': 'R',
         }
-        profile = who_treatment.DstProfile(phenos)
+        profile = who_treatment.DstProfile(phenos, 2017)
         self.assertEqual(12, profile.regimen.number)
+
+
+    def test_dst_profile_gets_correct_regimen_2018(self):
+        '''test DstProfile gets correct regimen'''
+        phenos = {
+            'Isoniazid': 'S',
+            'Rifampicin': 'S',
+            'Pyrazinamide': 'S',
+            'Ethambutol': 'S',
+        }
+
+        profile = who_treatment.DstProfile(phenos, 2018)
+        self.assertEqual(1, profile.regimen.number)
+
+        phenos['Isoniazid'] = 'R'
+        profile = who_treatment.DstProfile(phenos, 2018)
+        self.assertEqual(2, profile.regimen.number)
+
+        phenos['Moxifloxacin'] = 'S'
+        profile = who_treatment.DstProfile(phenos, 2018)
+        self.assertEqual(2, profile.regimen.number)
+
+        phenos['Moxifloxacin'] = 'R'
+        profile = who_treatment.DstProfile(phenos, 2018)
+        self.assertEqual(3, profile.regimen.number)
+
+        phenos = {
+            'Isoniazid': 'R',
+            'Rifampicin': 'S',
+            'Pyrazinamide': 'R',
+            'Ethambutol': 'S',
+        }
+        profile = who_treatment.DstProfile(phenos, 2018)
+        self.assertEqual(4, profile.regimen.number)
+
+        phenos = {
+            'Isoniazid': 'R',
+            'Rifampicin': 'S',
+            'Pyrazinamide': 'S',
+            'Ethambutol': 'R',
+        }
+        profile = who_treatment.DstProfile(phenos, 2018)
+        self.assertEqual(5, profile.regimen.number)
+
+        phenos = {
+            'Isoniazid': 'R',
+            'Rifampicin': 'S',
+            'Pyrazinamide': 'R',
+            'Ethambutol': 'R',
+        }
+        profile = who_treatment.DstProfile(phenos, 2018)
+        self.assertEqual(6, profile.regimen.number)
+        phenos['Kanamycin'] = 'R'
+        phenos['Amikacin'] = 'R'
+        phenos['Capreomycin'] = 'R'
+        phenos['Streptomycin'] = 'S'
+        profile = who_treatment.DstProfile(phenos, 2018)
+        self.assertEqual(7, profile.regimen.number)
+
+        phenos = {
+            'Isoniazid': 'S',
+            'Rifampicin': 'S',
+            'Pyrazinamide': 'R',
+            'Ethambutol': 'S',
+        }
+        profile = who_treatment.DstProfile(phenos, 2018)
+        self.assertEqual(8, profile.regimen.number)
+
+        phenos = {
+            'Isoniazid': 'S',
+            'Rifampicin': 'S',
+            'Pyrazinamide': 'S',
+            'Ethambutol': 'R',
+        }
+        profile = who_treatment.DstProfile(phenos, 2018)
+        self.assertEqual(9, profile.regimen.number)
+
+        phenos = {
+            'Rifampicin': 'R',
+        }
+        profile = who_treatment.DstProfile(phenos, 2018)
+        self.assertEqual(10, profile.regimen.number)
+
+        phenos = {
+            'Rifampicin': 'R',
+            'Isoniazid': 'R',
+        }
+        profile = who_treatment.DstProfile(phenos, 2018)
+        self.assertEqual(10, profile.regimen.number)
+
+        phenos = {
+            'Isoniazid': 'R',
+            'Rifampicin': 'R',
+            'Moxifloxacin': 'S',
+        }
+        profile = who_treatment.DstProfile(phenos, 2018)
+        self.assertEqual(10, profile.regimen.number)
+
+        phenos = {
+            'Isoniazid': 'R',
+            'Rifampicin': 'R',
+            'Moxifloxacin': 'R',
+        }
+        profile = who_treatment.DstProfile(phenos, 2018)
+        self.assertEqual(11, profile.regimen.number)
 
 
     def test_has_same_regimen(self):
@@ -131,19 +236,19 @@ class TestWhoTreatment(unittest.TestCase):
             'Ethambutol': 'S',
         }
 
-        dst1 = who_treatment.DstProfile(phenos)
-        dst2 = who_treatment.DstProfile(phenos)
+        dst1 = who_treatment.DstProfile(phenos, 2017)
+        dst2 = who_treatment.DstProfile(phenos, 2017)
         self.assertFalse(dst1.has_same_regimen(dst2))
 
         phenos['Isoniazid'] = 'S'
-        dst1 = who_treatment.DstProfile(phenos)
+        dst1 = who_treatment.DstProfile(phenos, 2017)
         self.assertFalse(dst1.has_same_regimen(dst2))
 
-        dst2 = who_treatment.DstProfile(phenos)
+        dst2 = who_treatment.DstProfile(phenos, 2017)
         self.assertTrue(dst1.has_same_regimen(dst2))
 
         phenos['Isoniazid'] = 'R'
-        dst1 = who_treatment.DstProfile(phenos)
-        dst2 = who_treatment.DstProfile(phenos)
+        dst1 = who_treatment.DstProfile(phenos, 2017)
+        dst2 = who_treatment.DstProfile(phenos, 2017)
         self.assertTrue(dst1.has_same_regimen(dst2))
 
