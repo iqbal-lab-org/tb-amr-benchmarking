@@ -135,10 +135,9 @@ regimens = {
            'H-Z-E DR-TB',
            {
                 'Rifampicin',
-                'Ethambutol',
+                'Ethionamide',
                 ('one_of', ('Moxifloxacin', 'Levofloxacin', 'Gatifloxacin')),
                 ('one_of', ('Kanamycin', 'Amikacin', 'Capreomycin')),
-                ('one_of', tuple(group_to_drug[4])),
            },
            None,
        ),
@@ -147,9 +146,9 @@ regimens = {
            'H-Z-E DR-TB',
            {
                'Rifampicin',
-               'Ethambutol',
+               'Ethionamide',
                'Streptomycin',
-               ('one_of', tuple(group_to_drug[4])),
+                ('one_of', ('Moxifloxacin', 'Levofloxacin', 'Gatifloxacin')),
            },
            None,
        ),
