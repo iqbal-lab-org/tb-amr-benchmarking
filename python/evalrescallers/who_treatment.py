@@ -12,6 +12,11 @@ profile_drugs = {
     'Ofloxacin': 'Ofx',
     'Ciprofloxacin': 'Cfx',
     'Moxifloxacin': 'Mfx',
+    'Bedaquiline': 'Bdq',
+    'Linezolid': 'Lzd',
+    'Clofazimide': 'Cfz',
+    'Cycloserine': 'Cs',
+    'Terizidone': 'Trd',
 }
 
 group_to_drug = {
@@ -85,6 +90,7 @@ group_to_drug = {
 
 Regimen = namedtuple('Regimen', ['number', 'definition', 'mandatory', 'optional'])
 
+
 regimens = {
     1: Regimen(
            1,
@@ -116,7 +122,7 @@ regimens = {
        ),
     5: Regimen(
            5,
-           'H-Z-E DR-TB',
+           'H-E DR-TB',
            {
                'Rifampicin',
                'Pyrazinamide',
@@ -129,10 +135,9 @@ regimens = {
            'H-Z-E DR-TB',
            {
                 'Rifampicin',
-                'Ethambutol',
+                'Ethionamide',
                 ('one_of', ('Moxifloxacin', 'Levofloxacin', 'Gatifloxacin')),
                 ('one_of', ('Kanamycin', 'Amikacin', 'Capreomycin')),
-                ('one_of', tuple(group_to_drug[4])),
            },
            None,
        ),
@@ -141,9 +146,9 @@ regimens = {
            'H-Z-E DR-TB',
            {
                'Rifampicin',
-               'Ethambutol',
+               'Ethionamide',
                'Streptomycin',
-               ('one_of', tuple(group_to_drug[4])),
+                ('one_of', ('Moxifloxacin', 'Levofloxacin', 'Gatifloxacin')),
            },
            None,
        ),
@@ -163,33 +168,19 @@ regimens = {
            10,
            'RR-TB',
            {
-               'Pyrazinamide',
-                ('one_of', ('Moxifloxacin', 'Levofloxacin', 'Gatifloxacin')),
-                ('one_of', ('Kanamycin', 'Amikacin', 'Capreomycin')),
-                ('at_least_two', tuple(group_to_drug['C'])),
+                'Bedaquiline',
+                'Linezolid',
+                ('one_of', ('Moxifloxacin', 'Levofloxacin')),
+                ('one_of', ('Clofazimide', 'Cycloserine', 'Terizidone')),
            },
-           {'High Dose Isoniazid', 'Ethambutol'},
+           None,
         ),
     11: Regimen(
             11,
-            'RR-TB',
-            {
-                ('one_of', ('Moxifloxacin', 'Gatifloxacin')),
-                'Kanamycin',
-                'Prothionamide',
-                'Clofazimide',
-                'High Dose Isoniazid',
-                'Pyrazinamide',
-                'Ethambutol',
-            },
-            None,
-        ),
-    12: Regimen(
-            12,
             'XDR-TB',
             {
                 ('all', tuple(group_to_drug[1])),
-                ('one_of', ('Kanamycin', 'Amikacin', 'Capreomycin', 'Streptomycin')),
+                ('one_of', ('Amikacin', 'Streptomycin')),
                 ('one_of', ('Levofloxacin', 'Moxifloxacin', 'Gatifloxacin')),
                 ('all', tuple(group_to_drug[4])),
                 ('at_least_two', tuple(group_to_drug[5].difference(group_to_drug['D2']))),
@@ -198,8 +189,6 @@ regimens = {
             None,
         ),
 }
-
-
 
 
 class DstProfile:
@@ -236,13 +225,7 @@ class DstProfile:
             self.regimen = regimens[8]
         elif first_line_tuple == ('S', 'S', 'S', 'R'):
             self.regimen = regimens[9]
-        elif (self.phenos['Isoniazid'], self.phenos['Rifampicin'], self.phenos['Kanamycin'], self.phenos['Moxifloxacin']) == ('R', 'R', 'S', 'S'):
-            self.regimen = regimens[11]
         elif (self.phenos['Isoniazid'], self.phenos['Rifampicin'], self.phenos['Moxifloxacin']) == ('R', 'R', 'R'):
-            self.regimen = regimens[12]
-        elif (self.phenos['Isoniazid'], self.phenos['Rifampicin']) == ('R', 'R'):
-            self.regimen = regimens[10]
-        elif (self.phenos['Rifampicin'], self.phenos['Kanamycin'], self.phenos['Moxifloxacin']) == ('R', 'S', 'S'):
             self.regimen = regimens[11]
         elif self.phenos['Rifampicin'] == 'R':
             self.regimen = regimens[10]

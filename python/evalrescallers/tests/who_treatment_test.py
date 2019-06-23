@@ -91,15 +91,7 @@ class TestWhoTreatment(unittest.TestCase):
 
         phenos = {
             'Rifampicin': 'R',
-            'Kanamycin': 'S',
-            'Moxifloxacin': 'S',
-        }
-        profile = who_treatment.DstProfile(phenos)
-        self.assertEqual(11, profile.regimen.number)
-
-        phenos = {
             'Isoniazid': 'R',
-            'Rifampicin': 'R',
         }
         profile = who_treatment.DstProfile(phenos)
         self.assertEqual(10, profile.regimen.number)
@@ -107,11 +99,10 @@ class TestWhoTreatment(unittest.TestCase):
         phenos = {
             'Isoniazid': 'R',
             'Rifampicin': 'R',
-            'Kanamycin': 'S',
             'Moxifloxacin': 'S',
         }
         profile = who_treatment.DstProfile(phenos)
-        self.assertEqual(11, profile.regimen.number)
+        self.assertEqual(10, profile.regimen.number)
 
         phenos = {
             'Isoniazid': 'R',
@@ -119,7 +110,7 @@ class TestWhoTreatment(unittest.TestCase):
             'Moxifloxacin': 'R',
         }
         profile = who_treatment.DstProfile(phenos)
-        self.assertEqual(12, profile.regimen.number)
+        self.assertEqual(11, profile.regimen.number)
 
 
     def test_has_same_regimen(self):
