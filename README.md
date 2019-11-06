@@ -6,7 +6,7 @@ Pipeline for benchmarking TB AMR callers.
 
 Nextflow and singularity need to be installed.
 
-Clone this repository, and build the build the singularity container:
+Clone this repository, and build the singularity container:
 
     cd singularity
     sudo singularity build container.img singularity.def
@@ -21,7 +21,7 @@ need to change nextflow options or config depending on your environment.
 The nextflow script to run is `nextflow/run_callers.nf` in this repository.
 
 Two input tab-delimited files are required:
-* A file with ample names and reads file paths.
+* A file with sample names and reads file paths.
   This should have no header line, and
   one line per sample. Column 1 = sample name, Column 2 = reads file 1,
   Column 3 = reads file 2.
