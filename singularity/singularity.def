@@ -106,6 +106,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     git clone --recursive https://github.com/jodyphelan/TBProfiler.git
     cd TBProfiler
     git checkout 327e431c3e9de2897a885fabe6bfede1421b2470
+    git submodule update --recursive
     bash install_prerequisites.sh
 
     #______________________ nextflow ____________________#
