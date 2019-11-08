@@ -168,6 +168,7 @@ regimens = {
            10,
            'RR-TB',
            {
+                'Isoniazid',
                 'Bedaquiline',
                 'Linezolid',
                 ('one_of', ('Moxifloxacin', 'Levofloxacin')),
@@ -176,7 +177,18 @@ regimens = {
            None,
         ),
     11: Regimen(
-            11,
+           11,
+           'MDR-TB',
+           {
+                'Bedaquiline',
+                'Linezolid',
+                ('one_of', ('Moxifloxacin', 'Levofloxacin')),
+                ('one_of', ('Clofazimide', 'Cycloserine', 'Terizidone')),
+           },
+           None,
+        ),
+    12: Regimen(
+            12,
             'XDR-TB',
             {
                 ('all', tuple(group_to_drug[1])),
@@ -226,6 +238,8 @@ class DstProfile:
         elif first_line_tuple == ('S', 'S', 'S', 'R'):
             self.regimen = regimens[9]
         elif (self.phenos['Isoniazid'], self.phenos['Rifampicin'], self.phenos['Moxifloxacin']) == ('R', 'R', 'R'):
+            self.regimen = regimens[12]
+        elif self.phenos['Isoniazid'] == 'R' and self.phenos['Rifampicin'] == 'R':
             self.regimen = regimens[11]
         elif self.phenos['Rifampicin'] == 'R':
             self.regimen = regimens[10]
